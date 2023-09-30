@@ -1,0 +1,49 @@
+// Mobile and general
+.navbar__container {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  width: 100%;
+  ul {
+    margin-top: 2rem;
+    display: flex;
+    font-size: 1.25rem;
+
+    li + li {
+      margin-left: 1rem;
+    }
+  }
+  .ic_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    font-size: 1.25rem;
+    width: 40%;
+    margin-top: 2rem;
+    a + a {
+      margin-left: 1rem;
+    }
+    a {
+      color: black;
+    }
+  }
+}
+// Desktop
+@media (min-width: 768px) {
+  .navbar__container {
+    padding-top: 4rem;
+    padding-left: 4rem;
+    width: 30%;
+    ul {
+      flex-direction: column;
+      li + li {
+        margin: 0;
+      }
+    }
+  }
+  .ic_container {
+    width: 40%;
+    flex-direction: column;
+    margin-top: 12rem;
+  }
+}

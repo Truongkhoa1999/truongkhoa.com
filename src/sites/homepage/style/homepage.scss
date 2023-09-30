@@ -1,0 +1,26 @@
+// General + Mobile
+.homepage__container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  .profile__image {
+    margin-top: 4rem;
+    width: 95%;
+    // margin-right: 2rem;
+    align-self: center;
+  }
+}
+// Desktop
+@media (min-width: 768px) {
+  .homepage__container {
+    flex-direction: row;
+    .profile__image {
+      margin-top: 0;
+      width: 70%;
+      margin-right: 2rem;
+    }
+  }
+}

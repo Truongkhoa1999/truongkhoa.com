@@ -15,7 +15,7 @@ export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
         <ul>
           <li onClick={() => handleSwitchElements("home")}>Home</li>
           <li onClick={() => handleSwitchElements("about")}>About</li>
-          <li>Projects</li>
+          <li onClick={() => handleSwitchElements("project")}>Projects</li>
           <li>Gallery</li>
         </ul>
       </div>

@@ -1,0 +1,71 @@
+// Genral + mobile phone
+.about_container {
+  padding-bottom: 2rem;
+  .about__title {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  margin-top: 1rem;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  .bio__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    .bio__text {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      align-self: center;
+      p {
+        width: 90%;
+        font-size: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h3,
+      h4 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .image__wrapper {
+      margin-left: 1rem;
+      width: 90%;
+      height: 30rem;
+      display: flex;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .about_container {
+    margin-top: 8rem;
+    .about__title {
+      font-size: 2rem;
+      text-align: left;
+    }
+    .bio__wrapper {
+      flex-direction: row;
+      align-items: center;
+      .bio__text {
+        width: 50%;
+        p {
+          width: 90%;
+          font-size: 20px;
+        }
+      }
+      .image__wrapper {
+        margin-left: 1rem;
+        width: 80%;
+        height: 40rem;
+        margin-top: 0;
+        align-self: flex-start;
+      }
+    }
+  }
+}

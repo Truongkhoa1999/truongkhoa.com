@@ -1,13 +1,15 @@
+// Style
+import "./style/home.scss";
 export const Home = () => {
-    const disableRightClickBehavior = (
-        event: React.MouseEvent<HTMLImageElement>
-      ) => {
-        event.preventDefault();
-      };
+  const disableRightClickBehavior = (
+    event: React.MouseEvent<HTMLImageElement>
+  ) => {
+    event.preventDefault();
+  };
   return (
     <img
       className="profile__image"
-      src="https://icapps.com/uploads/site/what-is-the-right-background-for-a-react-native-developer/_1200x630_crop_center-center_82_none/React_Native_image.jpg?mtime=1594715542"
+      src="https://lh3.googleusercontent.com/pw/ADCreHdBagF0v4RBKgzNtpH6hPMeXrPkUZj8psq6Kg6oYEARfwx5pDAQFURi1PKVIV13KYmXvTBFhsumNkbQobFkzX4je4Kp7GvYLvNhhmyGYCvCPxiWEJzXOzuzDS7ASwevE1rJd4O2mEgTxmTDIQf7pIQYtQ=w1487-h1115-s-no?authuser=0"
       alt="profile picture"
       onContextMenu={disableRightClickBehavior}
     />

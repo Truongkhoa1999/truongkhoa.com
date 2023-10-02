@@ -106,60 +106,6 @@ export const About = () => {
       </div>
 
       <br />
-
-      {/* <div className="tech_wrapper">
-        <h3>Tech involvement</h3>
-        <br />
-        <h4>Frontend</h4>
-        <p>TypeScript</p>
-        <p>JavaScript</p>
-        <p>ReactJS</p>
-        <p>ReactNative</p>
-        <p>MUI</p>
-        <p>Saas</p>
-        <br />
-        <h4>Backend</h4>
-        <p>Java</p>
-        <p>SpringBoot</p>
-        <br />
-        <h4>Database</h4>
-        <p>MongoDB</p>
-        <p>PostgresSQL</p>
-        <br />
-        <h4>Deployment</h4>
-        <p>Netlify</p>
-        <p>Heroku</p>
-        <p>Render</p>
-        <br />
-        <h4>Version Control</h4>
-        <p>GitHub</p>
-        <br />
-        <h4>Graphic Design</h4>
-        <p>Figma</p>
-        <p>AdobeXD</p>
-        <br />
-        <h4>Project Management</h4>
-        <p>Jira</p>
-        <br />
-        <h4>Video Editing</h4>
-        <p>Blender3D</p>
-        <p>AE</p>
-      </div>
-      <br />
-      <div className="badge_wrapper">
-        <h3>Badge & Qualification</h3>
-        <br />
-        <p>2023: Integrify Graduation, Fullstack GPA:4.5 on HackeRank </p>
-        <br />
-        <p>
-          2022: Haaga-Helia UAS graduation, Bachelor Business Information
-          Technology GPA: 4.0
-        </p>
-        <br />
-        <p>2022: Mehtaheino, Web Design Fit to Project </p>
-        <br />
-        <p>2022: FreeCodeCamp: Responsive Web Design</p>
-      </div> */}
     </div>
   );
 };

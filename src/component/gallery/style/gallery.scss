@@ -13,14 +13,65 @@
     width: 100%;
     margin-top: 2rem;
   }
+  .zoomed__image__container {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    .zoomed-image {
+      object-fit: contain;
+      max-width: 100%;
+      max-width: 100%;
+      margin-bottom: 2rem;
+   
+    }
+    .zoom-out-button {
+      // width: 30px;
+      // height: 30px;
+      position: inherit;
+      top: 0;
+      right: 0;
+      border: none;
+      padding: 1rem;
+      &:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
 }
 // PC
 @media (min-width: 768px) {
   .gallery__wrapper {
     margin-top: 8rem;
-    img {
+    margin: 8rem 0;
+    width: 60%;
+    overflow: hidden;
+    .thumbnail {
       width: 30rem;
+      height: 20rem;
       margin-right: 10px;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      &:hover {
+        scale: 1.5;
+        transition: 1s;
+        cursor: pointer;
+      }
     }
   }
+  // .zoomed__image__container {
+  //   .zoomed-image {
+  //       max-width: 100%;
+  //     max-width: 100%;
+  //   }
+  // }
 }

@@ -1,16 +1,44 @@
 // General + mobile
-.profile__image {
-  margin-top: 4rem;
-  width: 95%;
-  align-self: center;
+.home__container {
+  display: flex;
+  flex-direction: column;
+  width: 97%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  padding-bottom: 10rem;
+  // height: 100vh;
+  overflow: hidden;
+  .profile__image {
+    margin-top: 4rem;
+    width: 95%;
+    align-self: center;
+  }
+  .video {
+    width: 80rem;
+
+    margin-top: 4rem;
+    align-self: center;
+  }
 }
+
 // Desktop
 @media (min-width: 768px) {
-  .profile__image {
-    width: 80%;
-    margin-top: 5rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5rem;
+  .home__container {
+    flex-direction: row;
+
+    .profile__image {
+      width: 50%;
+      margin-top: 5rem;
+
+      margin-bottom: 5rem;
+    }
+    .video {
+      margin-left: 2rem;
+      height: 90%;
+      width: 80;
+      margin-top: 25rem;
+      border: none;
+    }
   }
 }

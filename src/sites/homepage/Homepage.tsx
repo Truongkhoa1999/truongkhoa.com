@@ -7,46 +7,44 @@ import { About } from "../../component/about/About";
 import { Home } from "../../component/home/Home";
 import { Projects } from "../../component/project/Projects";
 import { Contact } from "../../component/contact/Contact";
+import { Gallery } from "../../component/gallery/Gallery";
+interface NavProps {
+  home: boolean;
+  about: boolean;
+  contact: boolean;
+  project: boolean;
+  gallery: boolean;
+}
+
 export const Homepage = () => {
-  const [isHome, setIsHome] = useState(true);
-  const [isAbout, setIsAbout] = useState(false);
-  const [isProject, setIsProject] = useState(false);
-  const [isContact, setIsContact] = useState(false);
-
+  const [elementsState, setElementsState] = useState<NavProps>({
+    home: true,
+    about: false,
+    contact: false,
+    project: false,
+    gallery: false,
+  });
   const handleElementsAreClicked = (elements: string) => {
-    if (elements === "home") {
-      setIsAbout(false);
-      setIsProject(false);
-      setIsContact(false);
-      setIsHome(true);
-    } else if (elements === "about") {
-      setIsHome(false);
-      setIsProject(false);
-      setIsContact(false);
-      setIsAbout(true);
-    } else if (elements === "project") {
-      setIsHome(false);
-      setIsAbout(false);
-      setIsContact(false);
-      setIsProject(true);
+    const updatedObject = { ...elementsState } as NavProps;
 
-      setIsProject(true);
-    } else if (elements === "contact") {
-      setIsHome(false);
-      setIsAbout(false);
-      setIsProject(false);
-      setIsContact(true);
+    for (const key in updatedObject) {
+      if (key === elements) {
+        updatedObject[key as keyof NavProps] = true;
+      } else {
+        updatedObject[key as keyof NavProps] = false;
+      }
     }
+    setElementsState(updatedObject);
   };
-
   return (
     <div className="homepage__container">
       <Navbar handleSwitchElements={handleElementsAreClicked} />
       <div className="content__container">
-        {isHome ? <Home /> : ""}
-        {isAbout ? <About /> : ""}
-        {isProject ? <Projects /> : ""}
-        {isContact ? <Contact /> : ""}
+        {elementsState.home ? <Home /> : ""}
+        {elementsState.about ? <About /> : ""}
+        {elementsState.project ? <Projects /> : ""}
+        {elementsState.contact ? <Contact /> : ""}
+        {elementsState.gallery ? <Gallery /> : ""}
       </div>
     </div>
   );

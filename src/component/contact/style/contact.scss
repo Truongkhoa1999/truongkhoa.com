@@ -40,16 +40,21 @@
     p {
       text-align: left;
       font-size: 1.2rem;
-      width: 30%;
+      width: 45%;
     }
     form {
-        align-items: start;
+      align-items: start;
       input {
         width: 45%;
         border: 1px solid black;
       }
-      input:last-child{
+      input:last-child {
         width: 20%;
+        &:hover{
+          cursor: pointer;
+          background-color: black;
+          color: white;
+        }
       }
     }
   }

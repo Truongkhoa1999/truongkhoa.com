@@ -14,9 +14,20 @@ export const Contact = () => {
           id="fname"
           name="email"
           placeholder="Your email address"
+          required={true}
         />
-        <input type="text" name="subject" placeholder="Subject" />
-        <input type="text" name="message" placeholder="Your message" />
+        <input
+          required={true}
+          type="text"
+          name="subject"
+          placeholder="Subject"
+        />
+        <input
+          required={true}
+          type="text"
+          name="message"
+          placeholder="Your message"
+        />
         <input type="submit" value="Submit" />
       </form>
     </div>

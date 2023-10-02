@@ -10,14 +10,14 @@ interface NavProps {
 export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
   return (
     <div className="navbar__container">
-      <h1>TRUONG KHOA</h1>
+      <h1 className="logo" onClick={() => handleSwitchElements("home")}>TRUONG KHOA</h1>
       <div className="ul__container">
         <ul>
           <li onClick={() => handleSwitchElements("home")}>Home</li>
           <li onClick={() => handleSwitchElements("about")}>About</li>
           <li onClick={() => handleSwitchElements("project")}>Projects</li>
           <li onClick={() => handleSwitchElements("contact")}>Contact</li>
-          <li>Gallery</li>
+          <li onClick={() => handleSwitchElements("gallery")}>Gallery</li>
         </ul>
       </div>
       <div className="ic_container">

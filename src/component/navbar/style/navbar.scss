@@ -4,6 +4,13 @@
   padding-left: 2rem;
   width: 100%;
   // align-self: flex-start;
+  .logo,
+  .fa {
+    &:hover {
+      cursor: pointer;
+      color: green;
+    }
+  }
   ul {
     margin-top: 2rem;
     display: flex;

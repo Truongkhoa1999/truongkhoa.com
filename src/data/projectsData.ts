@@ -24,7 +24,7 @@ export const projectsData: ProjectDataProps[] = [
     role: "version 1.0",
     image:
       "https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/thumbnail%2Fportfolio1.avif?alt=media&token=67f13c44-72e4-41a5-9781-d84d7b4c90dc&_gl=1*1sz6x4d*_ga*NDk2MzQ2NTIzLjE2ODk4ODczMDY.*_ga_CW55HF8NVT*MTY5NjI2NzI4Ni4zNC4xLjE2OTYyNjk3MjMuNjAuMC4w",
-    link: "https://github.com/Truongkhoa1999/fs14-fullstack",
+    link: "https://zingy-centaur-d02510.netlify.app/",
   },
   {
     name: "Fullstack Ecommerce",

@@ -15,7 +15,7 @@ export const Home = () => {
         alt="profile picture"
         onContextMenu={disableRightClickBehavior}
       />
-      <iframe
+      {/* <iframe
         // width="500"
         // height="300"
         src="https://www.youtube.com/embed/gk1g53AZVds"
@@ -24,7 +24,7 @@ export const Home = () => {
         allowFullScreen
         className="video"
         allow="autoplay; encrypted-media"
-      />
+      /> */}
     </div>
   );
 };

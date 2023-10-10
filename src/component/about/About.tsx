@@ -99,7 +99,7 @@ export const About = () => {
 
         <div className="image__wrapper">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/thebra-f81ef.appspot.com/o/Untitled%20design.jpg?alt=media&token=296df679-acfe-498a-b74a-f3c268ba76d6&_gl=1*vkzxnl*_ga*ODc2NjgzODM2LjE2ODY4NTQ1NzQ.*_ga_CW55HF8NVT*MTY5NjA5NzM3MS4xMy4xLjE2OTYwOTc0ODMuNjAuMC4w"
+            src="https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/thumbnail%2Fcc2.avif?alt=media&token=b3720032-106f-410f-bafd-be1e8f9be0ed&_gl=1*193ssoi*_ga*NDk2MzQ2NTIzLjE2ODk4ODczMDY.*_ga_CW55HF8NVT*MTY5Njk2NDY5NS4zNi4xLjE2OTY5NjQ3MDguNDcuMC4w"
             alt=""
           />
         </div>

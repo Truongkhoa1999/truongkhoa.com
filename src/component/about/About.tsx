@@ -40,13 +40,20 @@ export const About = () => {
             <br />
           </p>
           <h3>Organization involvement</h3>
-          <p>Integrify Academy, full-time Software trainee</p>
+          <div className="logoes">
+            <img className="logo" src="https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/logo%2Fintegrify-logo-250x98-1.avif?alt=media&token=eab7e7b1-2207-471f-9e60-10d6c2da787e&_gl=1*1dq6tey*_ga*MTUwMTg2NDkwMS4xNjk4NTI2NTcy*_ga_CW55HF8NVT*MTY5ODUyOTUzMS4yLjEuMTY5ODUyOTU1NS4zNi4wLjA." alt="" />
+            <img className="logo" src="https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/logo%2Fmehtahenio.avif?alt=media&token=f1d8c814-0cdb-41a9-8bd7-bc3a441d36de&_gl=1*t4dg0e*_ga*MTUwMTg2NDkwMS4xNjk4NTI2NTcy*_ga_CW55HF8NVT*MTY5ODUyOTUzMS4yLjEuMTY5ODUzMDI1MS41MS4wLjA." alt="" />
+            <img className="logo" src="https://firebasestorage.googleapis.com/v0/b/thebra-f81ef.appspot.com/o/LOGO%2Flogo.avif?alt=media&token=ff9f07e1-ab03-4d18-bdb5-87b36b41ce24&_gl=1*gxl22b*_ga*MTUwMTg2NDkwMS4xNjk4NTI2NTcy*_ga_CW55HF8NVT*MTY5ODUyOTUzMS4yLjEuMTY5ODUzMDA0MC4zNy4wLjA." alt="" />
+            <img className="logo" src="https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/logo%2Fdzistar.avif?alt=media&token=516b0144-dc95-42ee-91dc-44b9cccf6089&_gl=1*17gk5qs*_ga*MTUwMTg2NDkwMS4xNjk4NTI2NTcy*_ga_CW55HF8NVT*MTY5ODUyOTUzMS4yLjEuMTY5ODUzMDQ4OS4zMC4wLjA." alt="" />
+         
+          </div>
+          {/* <p>Integrify Academy, full-time Software trainee</p>
           <p>Thebra.fi, Co-founder</p>
           <p>
             Mehtaheino 3D Printing Industry, freelance UI designer, UI tester
           </p>
-          <p>Dzistar.com, internship UI designer</p>
-          <h3>Tech involvement</h3>
+          <p>Dzistar.com, internship UI designer</p> */}
+          {/* <h3>Tech involvement</h3>
           <br />
           <h4>Frontend</h4>
           <p>TypeScript</p>
@@ -94,14 +101,15 @@ export const About = () => {
           <br />
           <p>2022: Mehtaheino, Web Design Fit to Project </p>
           <br />
-          <p>2022: FreeCodeCamp: Responsive Web Design</p>
+          <p>2022: FreeCodeCamp: Responsive Web Design</p> */}
         </div>
 
         <div className="image__wrapper">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/thumbnail%2Fcc2.avif?alt=media&token=b3720032-106f-410f-bafd-be1e8f9be0ed&_gl=1*193ssoi*_ga*NDk2MzQ2NTIzLjE2ODk4ODczMDY.*_ga_CW55HF8NVT*MTY5Njk2NDY5NS4zNi4xLjE2OTY5NjQ3MDguNDcuMC4w"
+            src="https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/thumbnail%2Fprofile.avif?alt=media&token=3cb152e3-d74e-4bd4-83a0-02f79340d796&_gl=1*tyo8qa*_ga*MTUwMTg2NDkwMS4xNjk4NTI2NTcy*_ga_CW55HF8NVT*MTY5ODUyNjU3Mi4xLjEuMTY5ODUyNzUxMS40Ny4wLjA."
             alt=""
           />
+          
         </div>
       </div>
 

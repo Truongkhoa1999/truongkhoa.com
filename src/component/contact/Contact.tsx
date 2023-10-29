@@ -2,7 +2,7 @@ import "./style/contact.scss";
 export const Contact = () => {
   return (
     <div className="contact__wrapper">
-      <h1>Contact</h1>
+      <h1 className="sitename">Contact</h1>
       <p>
         Welcome to my World. Dont hesitate getting in touch with me. I am happy
         to recive new project offers. Please hit my email via the form below!

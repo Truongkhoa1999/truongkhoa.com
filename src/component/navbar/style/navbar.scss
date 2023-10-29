@@ -4,41 +4,62 @@
   padding-left: 2rem;
   width: 100%;
   // align-self: flex-start;
+  font-family: 'HyperSuperRegular';
+
+  .logo {
+    letter-spacing: .85rem;
+  }
+
   .logo,
   .fa {
     &:hover {
       cursor: pointer;
-      color: green;
+      border-bottom: 0.25px solid gray;
     }
   }
+
   ul {
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    letter-spacing: .5rem;
+
     li {
       width: 30%;
       margin-left: 1rem;
       margin-top: 0.5rem;
       padding: 5px;
+
       &:hover {
         cursor: pointer;
-        color: green;
+        color: black;
       }
     }
+
+    .li-active {
+      color: black;
+      transition: 2s;
+    }
+
+    .li-inactive {
+      color: gray;
+    }
   }
+
   .ic_container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     margin-left: 1rem;
-
     font-size: 1.25rem;
     width: 40%;
     margin-top: 2rem;
-    a + a {
+
+    a+a {
       margin-left: 0.5rem;
     }
+
     a {
       padding: 5px;
 
@@ -46,16 +67,24 @@
     }
   }
 }
+
 // Desktop
 @media (min-width: 768px) {
   .navbar__container {
     padding-top: 4rem;
     padding-left: 4rem;
     width: 30%;
+
     ul {
+      font-size: 1.25rem;
       flex-direction: column;
+      letter-spacing: .75rem;
+      li{
+        width: 40%;
+      }
     }
   }
+
   .ic_container {
     flex-wrap: wrap;
     flex-direction: column;

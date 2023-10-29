@@ -7,38 +7,59 @@
   margin-right: auto;
   margin-top: 2rem;
   padding-bottom: 10rem;
-  // height: 100vh;
   overflow: hidden;
-  .profile__image {
-    margin-top: 4rem;
-    width: 95%;
-    align-self: center;
-  }
-  .video {
-    width: 80rem;
+  .typorgraphy {
 
-    margin-top: 4rem;
-    align-self: center;
+    font-size: 4rem;
+    width: 90%;
+    text-align: right;
+    font-family: 'HyperSuperRegular';
+    letter-spacing: 2rem;
+    text-shadow: 10px 10px gray;
+    color: rgb(255, 255, 255);
+    border-bottom: .5px solid gray;
+    padding: 1rem;
+
   }
+
+  .description {
+    font-family: 'HyperSuperRegular';
+    width: 90%;
+    color: gray;
+    align-self: center;
+    text-align: right;
+    margin-top: 1rem;
+    padding: 1rem;
+
+  }
+
 }
 
 // Desktop
 @media (min-width: 768px) {
   .home__container {
-    flex-direction: row;
+    flex-direction: column;
 
-    .profile__image {
-      width: 70%;
-      margin-top: 5rem;
+    // .profile__image {
+    //   width: 70%;
+    //   margin-top: 5rem;
 
-      margin-bottom: 5rem;
+    //   margin-bottom: 5rem;
+    // }
+    .typorgraphy {
+      // margin-top: 1rem;
+      font-size: 18rem;
+      text-align: right;
+      align-self:normal;
+      padding: 0;
     }
-    .video {
-      margin-left: 2rem;
-      height: 90%;
-      width: 80;
-      margin-top: 25rem;
-      border: none;
+
+    .description {
+      margin-top: 2rem;
+      text-align: right;
+      font-size: 2rem;
+      letter-spacing: 1rem;
+      align-self: normal;
     }
   }
 }

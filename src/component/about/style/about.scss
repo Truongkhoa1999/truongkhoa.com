@@ -5,6 +5,8 @@
     font-size: 2rem;
     text-align: center;
     padding-bottom: 2rem;
+    font-family: 'HyperSuperRegular';
+    letter-spacing: .85rem;
   }
   margin-top: 1rem;
   width: 95%;
@@ -15,6 +17,8 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
+    font-family: Futura;
+    font-weight: 50;
     .bio__text {
       width: 100%;
       margin-left: auto;
@@ -32,13 +36,38 @@
         margin-left: auto;
         margin-right: auto;
       }
+      .logoes{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        
+        align-items: center;
+        .logo{
+          width: 20%;          
+        }
+        .logo+.logo{
+          margin-top: 1rem;
+        }
+     
+      }
     }
 
     .image__wrapper {
       margin-left: 1rem;
       width: 90%;
-      height: 30rem;
-      display: flex;
+      height: 25rem;
+      // display: flex;
+      border: none;
+      img{
+        height: 80%;
+        align-self: center;
+        justify-content: center;
+      }
+      margin-bottom: 1rem;
     }
   }
 }
@@ -61,10 +90,24 @@
       }
       .image__wrapper {
         margin-left: 1rem;
-        width: 80%;
+        width: 50%;
         height: 40rem;
         margin-top: 0;
         align-self: flex-start;
+      }
+      .logoes{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        display: flex;
+        .logo{
+          width: 20%;          
+        }
+        .logo + .logo{
+          margin-left: 2rem;
+        }
       }
     }
   }

@@ -5,10 +5,15 @@
   align-items: center;
   margin-top: 1rem;
   padding-bottom: 2rem;
+  .sitename{
+    font-family: 'HyperSuperRegular';
+    letter-spacing: .85rem;
+  }
   p {
     width: 80%;
     text-align: center;
     margin: 1rem 0 1rem 0;
+    font-family: Futura;
   }
   form {
     display: flex;
@@ -21,6 +26,7 @@
       border-bottom: 1px solid black;
       margin-top: 1rem;
       padding: 1rem;
+      font-family: Futura;
     }
     input:last-child {
       border: 1px solid black;

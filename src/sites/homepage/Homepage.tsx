@@ -8,12 +8,16 @@ import { Home } from "../../component/home/Home";
 import { Projects } from "../../component/project/Projects";
 import { Contact } from "../../component/contact/Contact";
 import { Gallery } from "../../component/gallery/Gallery";
+import { Stacks } from "../../component/stacks/Stacks";
+import { Certificate } from "../../component/certificate/Certificate";
 interface NavProps {
   home: boolean;
   about: boolean;
   contact: boolean;
   project: boolean;
-  gallery: boolean;
+  collection: boolean;
+  stacks: boolean;
+  certificate: boolean;
 }
 
 export const Homepage = () => {
@@ -22,7 +26,9 @@ export const Homepage = () => {
     about: false,
     contact: false,
     project: false,
-    gallery: false,
+    collection: false,
+    stacks: false,
+    certificate: false,
   });
   const handleElementsAreClicked = (elements: string) => {
     const updatedObject = { ...elementsState } as NavProps;
@@ -44,7 +50,9 @@ export const Homepage = () => {
         {elementsState.about ? <About /> : ""}
         {elementsState.project ? <Projects /> : ""}
         {elementsState.contact ? <Contact /> : ""}
-        {elementsState.gallery ? <Gallery /> : ""}
+        {elementsState.collection ? <Gallery /> : ""}
+        {elementsState.stacks ? <Stacks /> : ""}
+        {elementsState.certificate ? <Certificate /> : ""}
       </div>
     </div>
   );

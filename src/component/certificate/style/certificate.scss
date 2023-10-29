@@ -1,0 +1,42 @@
+// mobile and general
+.certificate {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+
+    .title {
+        font-family: 'HyperSuperRegular';
+        letter-spacing: .85rem;
+        font-size: 2rem;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    .item{
+        display: flex;
+        flex-direction: column;
+        font-family: Futura;
+        font-size: 1.2rem;
+        a{
+            text-decoration: none;
+            color: gray;
+            &:hover{
+                color: black;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// pc
+
+@media(min-width:768px) {
+    .certificate {
+        margin-top: 8rem;
+
+        .title {
+            font-size: 2rem;
+            text-align: left;
+        }
+    }
+}

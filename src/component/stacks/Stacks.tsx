@@ -37,6 +37,7 @@ export const Stacks = () => {
                 <div>
                     <h4>GIT</h4>
                     <h4>AWS</h4>
+                    <h4>Docker</h4>
                 </div>
 
             </div>

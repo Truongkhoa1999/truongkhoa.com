@@ -1,11 +1,11 @@
 // Style
 import "./style/home.scss";
 export const Home = () => {
-  const disableRightClickBehavior = (
-    event: React.MouseEvent<HTMLImageElement>
-  ) => {
-    event.preventDefault();
-  };
+  // const disableRightClickBehavior = (
+  //   event: React.MouseEvent<HTMLImageElement>
+  // ) => {
+  //   event.preventDefault();
+  // };
   return (
     <div className="home__container">
       {" "}

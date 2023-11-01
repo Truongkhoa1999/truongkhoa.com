@@ -17,9 +17,10 @@ export const Stacks = () => {
             <div className='stack Backend'>
                 <h3>BACKEND</h3>
                 <div>
-                    <h4>Java</h4>
-                    <h4>SpringBoot</h4>
-                    <h4>AWS</h4>
+                    <h4>Java SpringBoot</h4>
+                    <h4>Node Express</h4>
+                    <h4>AWS Lambda</h4>
+                    <h4>AWS API GW</h4>
                 </div>
 
             </div>

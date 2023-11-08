@@ -10,7 +10,7 @@ import { Contact } from "../../component/contact/Contact";
 import { Gallery } from "../../component/gallery/Gallery";
 import { Stacks } from "../../component/stacks/Stacks";
 import { Certificate } from "../../component/certificate/Certificate";
-import { Footer } from "../../component/footer/Footer";
+// import { Footer } from "../../component/footer/Footer";
 interface NavProps {
   home: boolean;
   about: boolean;
@@ -55,7 +55,7 @@ export const Homepage = () => {
         {elementsState.stacks ? <Stacks /> : ""}
         {elementsState.certificate ? <Certificate /> : ""}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -1,24 +1,56 @@
 // Style
 import "./style/home.scss";
 export const Home = () => {
-  // const disableRightClickBehavior = (
-  //   event: React.MouseEvent<HTMLImageElement>
-  // ) => {
-  //   event.preventDefault();
-  // };
   return (
     <div className="home__container">
-      {" "}
-      {/* <img
-        className="profile__image"
-        src="https://lh3.googleusercontent.com/pw/ADCreHdBagF0v4RBKgzNtpH6hPMeXrPkUZj8psq6Kg6oYEARfwx5pDAQFURi1PKVIV13KYmXvTBFhsumNkbQobFkzX4je4Kp7GvYLvNhhmyGYCvCPxiWEJzXOzuzDS7ASwevE1rJd4O2mEgTxmTDIQf7pIQYtQ=w1487-h1115-s-no?authuser=0"
-        alt="profile picture"
-        onContextMenu={disableRightClickBehavior}
-      /> */}
       <h1 className="typorgraphy">
-        TRUONG KHOA
+        Designer & Developer
       </h1>
-      <h3 className="description">FullStack Developer - UI Desinger</h3>
+      <h3 className="description">Hi I am Truong Khoa, A Passionate in FullStack Web App Developing</h3>
+      <div className="code__container">
+        <div className="macos__nav">
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+        </div>
+        <div className="code__content">
+        <code>
+          <span style={{ color: '#569cd6' }}> const </span>
+          <span style={{ color: '#d4cc88' }}>repeatWorkHarder </span>
+          = <span style={{color:'#fed502'}}>{`(`}</span>
+          <span style={{color:'#9cdcfe'}}>isFail</span>
+          <span style={{color:'#fed502'}}>{`)`}</span>
+          <span style={{color:'#569cd6'}}> {`=>`}</span>
+          <span style={{ color: '#c869c5' }}>{` {`}</span>
+          <br />
+          <span style={{ color: '#c586c0' }}>&nbsp;&nbsp;while </span>
+          <span style={{color:'#569cd6'}}>{`(`}</span>
+          <span style={{color:'#9cdcfe'}}>isFail</span>
+          <span style={{color:'#569cd6'}}>{`) `}</span>
+          <span style={{color:'#569cd6'}}>{`{ `}</span>
+          <br />
+          <span style={{ color: '#9cdcfe' }}>&nbsp;&nbsp;&nbsp;sad</span>. 
+          <span style={{ color: '#d4cc88' }}>stop</span>
+          <span style={{color:'#fed502'}}>{`(`}</span>
+          <span style={{color:'#fed502'}}>{`)`}</span>
+          <br />
+          <span style={{ color: '#9cdcfe' }}>&nbsp;&nbsp;&nbsp;failure</span>. 
+          <span style={{ color: '#d4cc88' }}>admit</span>
+          <span style={{color:'#fed502'}}>{`(`}</span>
+          <span style={{color:'#fed502'}}>{`)`}</span>
+          <br />
+          <span style={{ color: '#d4cc88' }}>&nbsp;&nbsp;&nbsp;repeatWorkHarder</span>
+          <span style={{color:'#fed502'}}>{`(`}</span>
+          <span style={{ color: '#569cd6' }}>true</span>
+          <span style={{color:'#fed502'}}>{`)`}</span>
+          <br />
+          <span style={{color:'#569cd6'}}>&nbsp;&nbsp;{`}`}</span>
+          <br />
+          <span style={{ color: '#c869c5' }}>{`}`}</span>
+        </code>
+        </div>
+     
+      </div>
 
     </div>
   );

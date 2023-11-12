@@ -3,11 +3,13 @@
   padding-top: 2rem;
   padding-left: 2rem;
   width: 100%;
-  // align-self: flex-start;
   font-family: 'HyperSuperRegular';
 
   .logo {
     letter-spacing: .85rem;
+    background-color: #ff8383;
+    width: 70%;
+    color: black;
   }
 
   .logo,
@@ -33,17 +35,17 @@
 
       &:hover {
         cursor: pointer;
-        color: black;
+        color: #ff8383;
       }
     }
 
     .li-active {
-      color: black;
+      color: #ff8383;
       transition: 2s;
     }
 
     .li-inactive {
-      color: gray;
+      color: white;
     }
   }
 

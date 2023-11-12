@@ -8,29 +8,72 @@
   margin-top: 2rem;
   padding-bottom: 10rem;
   overflow: hidden;
-  .typorgraphy {
 
+  .typorgraphy {
     font-size: 4rem;
     width: 90%;
     text-align: right;
     font-family: 'HyperSuperRegular';
-    letter-spacing: 2rem;
-    text-shadow: 10px 10px gray;
-    color: rgb(255, 255, 255);
+    // color: #9069ff;
+    color: #ff8383;
     border-bottom: .5px solid gray;
     padding: 1rem;
+    word-spacing: 5px;
+    letter-spacing: 2px;
 
   }
 
   .description {
-    font-family: 'HyperSuperRegular';
+    color: white;
     width: 90%;
-    color: gray;
     align-self: center;
     text-align: right;
     margin-top: 1rem;
     padding: 1rem;
+  }
 
+  .code__container {
+    border: 1px solid white;
+    align-self: center;
+    color: white;
+    width: 90%;
+    text-align: left;
+    white-space: pre-line;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+
+    .macos__nav {
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      padding: 10px;
+
+      .circle {
+        width: 12px;
+        height: 12px;
+
+        border-radius: 50%;
+        margin-left: 4px;
+      }
+
+      .circle:first-child {
+        background-color: #fe6257;
+      }
+
+      .circle:nth-child(2) {
+        background-color: #ffbc2e;
+      }
+
+      .circle:last-child {
+        background-color: #27c83f;
+      }
+    }
+
+    .code__content {
+      margin: 2rem 0 2rem 2rem;
+    }
   }
 
 }
@@ -40,26 +83,24 @@
   .home__container {
     flex-direction: column;
 
-    // .profile__image {
-    //   width: 70%;
-    //   margin-top: 5rem;
-
-    //   margin-bottom: 5rem;
-    // }
     .typorgraphy {
-      // margin-top: 1rem;
-      font-size: 18rem;
+      font-size: 2rem;
       text-align: right;
-      align-self:normal;
+      align-self: normal;
       padding: 0;
     }
 
     .description {
       margin-top: 2rem;
       text-align: right;
-      font-size: 2rem;
-      letter-spacing: 1rem;
+      font-size: 1.5rem;
       align-self: normal;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .code__container {
+      
+      align-self:auto;
     }
   }
 }

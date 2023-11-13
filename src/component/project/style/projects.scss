@@ -3,11 +3,12 @@
   margin-top: 2rem;
   width: 97%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  // grid-template-columns: 1fr 1fr;
   margin-left: auto;
   margin-right: auto;
   // overflow: visible;
   font-family: Futura;
+  border: 1px solid red;
 
   h2,
   h3 {
@@ -23,10 +24,10 @@
     color: white !important;
   }
 
-  @media (min-width: 1500px) {
-    grid-template-columns: 0.45fr 1fr;
-    margin-top: 8rem;
-  }
+  // @media (min-width: 1500px) {
+  //   grid-template-columns: 0.45fr 1fr;
+  //   margin-top: 8rem;
+  // }
 
   @media (max-width: 790px) {
     display: flex;
@@ -38,7 +39,7 @@
 
   .project__card {
     margin-top: 1rem;
-
+border: 1px solid red;
     img {
       width: 100%;
       overflow: hidden;

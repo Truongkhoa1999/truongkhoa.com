@@ -1,15 +1,13 @@
 // Fontawsome
 
 import { projectsData } from "../../data/projectsData";
+import LanguageCounts from "./LanguageCounts";
 // Style
 import "./style/projects.scss";
 export const Projects = () => {
   const projectData = projectsData;
   return (
     <div className="projects__container">
-      {/* <div>
-      <h1>PROJECTS</h1>
-      </div> */}
       {projectData.map((i, index) => (
         <a href={i.link} target="_blank">
           <div className="project__card" key={index}>
@@ -27,6 +25,7 @@ export const Projects = () => {
           </div>
         </a>
       ))}
+      <LanguageCounts />
     </div>
   );
 };

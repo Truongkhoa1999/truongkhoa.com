@@ -1,0 +1,51 @@
+@import "../../../colors/colorpreset.scss";
+// general and mobile
+.fe__container{
+display: flex;
+flex-wrap: wrap;
+align-self: center;
+margin-top: 20px;
+padding-bottom: 7rem;
+img{
+    width: 15%;
+   
+    // background-color: gray;
+}   
+img + img{
+    margin-left: 10px;
+}
+.ele{
+    width: calc(90% - 10px);
+    margin-top: 20px;
+img , h3, p{
+    margin-bottom: 10px;
+}
+h3{
+color: $primary-color;
+}
+a{
+    // color: $secondary-color;
+    color: $supportive-color;
+    text-decoration: none;
+    border: 1px solid green;
+    padding: 4px;
+    background-color: $primary-color;
+    &:hover{
+        background-color: $supportive-color;
+        color: $secondary-color;
+    }
+}
+
+// h3,p,a{
+//     margin-left: 30px;
+// }
+}
+}
+@media (min-width:950px){
+    .fe__container{
+        .ele{
+            width: calc(33.33% - 10px);
+        }
+    }
+
+}

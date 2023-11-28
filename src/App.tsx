@@ -4,15 +4,18 @@ import { Homepage } from "./sites/homepage/Homepage";
 import "./App.css";
 import './style.scss'
 
+
 function App() {
   return (
-    <Router>
+    <div className="app_container">
+          <Router>
       <Routes>
         <Route path="/homepage" element={<Homepage />}></Route>
         <Route path="/*" element={<Homepage />}></Route>
-
       </Routes>
     </Router>
+    </div>
+
   );
 }
 

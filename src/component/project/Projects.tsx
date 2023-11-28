@@ -1,7 +1,5 @@
 // Fontawsome
-
 import { projectsData } from "../../data/projectsData";
-import LanguageCounts from "./LanguageCounts";
 // Style
 import "./style/projects.scss";
 export const Projects = () => {
@@ -25,7 +23,7 @@ export const Projects = () => {
           </div>
         </a>
       ))}
-      <LanguageCounts />
+      {/* <LanguageCounts /> */}
     </div>
   );
 };

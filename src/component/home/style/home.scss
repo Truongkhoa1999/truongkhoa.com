@@ -1,4 +1,6 @@
-// General + mobile
+@import '../../../colors/colorpreset.scss';
+
+// General
 .home__container {
   display: flex;
   flex-direction: column;
@@ -7,29 +9,65 @@
   margin-right: auto;
   margin-top: 2rem;
   padding-bottom: 10rem;
-  overflow: hidden;
 
-  .typorgraphy {
-    font-size: 4rem;
-    width: 90%;
-    text-align: right;
-    font-family: 'HyperSuperRegular';
-    // color: #9069ff;
-    color: #ff8383;
-    border-bottom: .5px solid gray;
-    padding: 1rem;
-    word-spacing: 5px;
-    letter-spacing: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-  }
+  .biotext__container {
+    display: flex;
 
-  .description {
-    color: white;
-    width: 90%;
-    align-self: center;
-    text-align: right;
-    margin-top: 1rem;
-    padding: 1rem;
+    .textGr {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .typorgraphy {
+        font-size: 4rem;
+        font-weight: lighter;
+        width: 90%;
+        color: $primary-color;
+        padding: 1rem;
+        letter-spacing: 2px;
+      }
+
+      .description {
+        color: $primary-color;
+        width: 90%;
+        align-self: center;
+        margin-top: 1rem;
+        padding: 1rem;
+        font-weight: lighter;
+      }
+
+      .viewbutton {
+        font-size: 20px;
+        color: white;
+        background-color: $primary-color;
+        font-weight: bold;
+        text-align: left;
+        width: 260px;
+        // height: 81px;
+        // padding: 1rem;
+        padding: 1rem;
+        text-decoration: none;
+        margin-top: 1rem;
+        box-shadow: 0 15px 5px gray;
+&:hover{
+  color:$secondary-color;
+  box-shadow: none;
+}
+      }
+    }
+ 
+    .bioPro__container {
+      background-image: url("https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/biopic.avif?alt=media&token=4e611f18-d60f-4769-b114-5c6878029f04");
+      width: 305px;
+      height: 429px;
+      background-position: center;
+      background-size: cover;
+      border: 5px solid $secondary-color;
+
+    }
+
   }
 
   .code__container {
@@ -41,6 +79,8 @@
     white-space: pre-line;
     font-size: 1.25rem;
     margin-top: 1rem;
+    background-color: black;
+    border: 2px solid black;
 
     .macos__nav {
       display: flex;
@@ -53,7 +93,6 @@
       .circle {
         width: 12px;
         height: 12px;
-
         border-radius: 50%;
         margin-left: 4px;
       }
@@ -73,6 +112,7 @@
 
     .code__content {
       margin: 2rem 0 2rem 2rem;
+
     }
   }
 
@@ -82,25 +122,104 @@
 @media (min-width: 768px) {
   .home__container {
     flex-direction: column;
+    width: 90%;
 
-    .typorgraphy {
-      font-size: 2rem;
-      text-align: right;
-      align-self: normal;
-      padding: 0;
+    .biotext__container {
+      width: 90%;
+      margin-left: 2rem;
+      justify-content: space-between;
+
+      .textGr {
+        width: 70%;
+
+        .typorgraphy {
+          font-size: 80px;
+          align-self: normal;
+          width: 70%;
+          padding: 0;
+          overflow: hidden;
+        }
+
+        .description {
+          margin-top: 2rem;
+          font-size: 30px;
+          align-self: normal;
+          overflow: hidden;
+
+        }
+      }
     }
 
-    .description {
-      margin-top: 2rem;
-      text-align: right;
-      font-size: 1.5rem;
-      align-self: normal;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
 
     .code__container {
-      
-      align-self:auto;
+      border: 5px solid $secondary-color;
+      margin-left: 2rem;
+      margin-top: 6rem;
+      align-self: auto;
+      overflow: hidden;
+
     }
+  }
+}
+// Mobile
+@media (max-width: 500px){
+  .home__container {
+    display: flex;
+    .biotext__container {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+
+      .textGr {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        
+        margin-bottom: 20px;
+        .typorgraphy {
+          font-size: 1.5rem;
+          color: $primary-color;
+          height: auto;
+        }
+        .description {
+          color: $primary-color;
+        }
+        .viewbutton {
+          font-size: 15px;
+          font-weight: bold;
+          text-align: left;
+          align-self: center;
+          width: 90%;
+          box-shadow: none;
+          height: 50px;
+          margin-top: 1rem;
+         
+        }
+  
+      }
+      .bioPro__container {
+        width: 50%;
+        height: 180px;
+        align-self: center;
+        background-position: center;
+        background-size: cover;
+        border: 2px solid $secondary-color;
+      // height: auto;
+
+      }
+  
+    }
+  
+    .code__container {
+
+      width: 90%;
+      
+  
+      .code__content {
+        margin: 2rem 0 2rem 2rem;
+  
+      }
+    }
+  
   }
 }

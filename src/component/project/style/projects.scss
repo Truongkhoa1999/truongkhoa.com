@@ -1,63 +1,51 @@
+@import "../../../colors/colorpreset.scss";
 // general and mobile phone
 .projects__container {
   margin-top: 2rem;
-  width: 97%;
-  display: grid;
-  // grid-template-columns: 1fr 1fr;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  // overflow: visible;
   font-family: Futura;
-  border: 1px solid red;
-
   h2,
   h3 {
     font-weight: normal;
+    color: $primary-color;
   }
-
   p {
-    color: red;
+    color: $secondary-color;
   }
-
   a {
     text-decoration: none;
-    color: white !important;
   }
-
-  // @media (min-width: 1500px) {
-  //   grid-template-columns: 0.45fr 1fr;
-  //   margin-top: 8rem;
-  // }
-
   @media (max-width: 790px) {
     display: flex;
     flex-wrap: wrap;
   }
-
   gap: 1rem;
   margin-bottom: 5rem;
-
   .project__card {
-    margin-top: 1rem;
-border: 1px solid red;
     img {
-      width: 100%;
+      width: 90%;
       overflow: hidden;
-
       filter: grayscale(100%);
-
+      padding: 2px;
       @media (min-width: 768px) {
         width: 30rem;
-        height: 17rem;
+        display: block;
+        overflow: auto;
       }
-
       &:hover {
         cursor: pointer;
-        // scale: 1.5;
         transition: 1s;
         filter: grayscale(0%);
         overflow: hidden;
+        
       }
+    }
+    &:hover{
+      border: 1px solid green;
     }
   }
 }

@@ -4,12 +4,13 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  height: 100vh;
-
+  // height: 100vh;
+height: 100%;
   .content__container {
     display: flex;
     flex-direction: column;
     width: 100%;
+
   }
 }
 // Desktop

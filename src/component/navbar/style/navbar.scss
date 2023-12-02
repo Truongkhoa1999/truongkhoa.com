@@ -201,9 +201,9 @@ border: 1px solid black;
 
 @media (min-width: 791px) {
   .navbar__container {
-    width: 40%;
-    height: 100%;
-  
+    width: 20%;
+    min-height: 100%;
+padding-bottom: 2rem;
     left: 0;
     display: block;
     box-shadow: 10px 5px 5px gray;

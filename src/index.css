@@ -4,5 +4,10 @@
   color: white;
 }
 body{
+  /* overflow: hidden; */
+
+}
+.main_container{
+  height: auto;
   overflow: hidden;
 }

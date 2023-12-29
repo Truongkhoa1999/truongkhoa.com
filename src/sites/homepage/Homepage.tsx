@@ -45,7 +45,8 @@ export const Homepage = () => {
         {elementsState.portfolio ? <Projects /> : ""}
         {elementsState.contact ? <Contact /> : ""}
         {elementsState.stacks ? <Stacks /> : ""}
-      </div>
+
+      </div>    
       {/* <Footer /> */}
     </div>
   );

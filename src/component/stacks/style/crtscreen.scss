@@ -1,0 +1,10 @@
+.container_sphere{
+    z-index: -1;
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+
+    overflow: hidden;
+    border: 1px solid red;
+    width: 10%;
+}

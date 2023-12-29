@@ -1,20 +1,61 @@
-import './style/frontendstack.scss'
+import { useState } from "react";
+import "./style/frontendstack.scss";
+import { ExpandedCertificate } from "../certificate/ExpandedCertificate";
 export const BackendStack = () => {
-    return (
-        <div className='fe__container'>
-            <div className='ele js__container'>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" />
-                <p>RestAPI,<br/>(Author) authentication<br/>Data construction</p>
-                <h3>Java SpringBoot</h3>
-                <a href="google.com">Certificates</a>
-            </div>
-            <div className='ele js__container'>          
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
-                <h3>NodeJS</h3>
-                <p>RestAPI <br/>Hands-on with non-relational db </p>
-                <a href="google.com">Certificate</a>
-            </div>
-        </div>
-    )
-}
+  const [isExpandedCertificate, setIsExpandedCertificate] = useState(false);
+
+  const handleOpenNoti = () => {
+    setIsExpandedCertificate(true);
+  };
+  return (
+    <div className="fe__container">
+      {isExpandedCertificate ? (
+        <ExpandedCertificate
+          setIsExpandedCertificate={setIsExpandedCertificate}
+        />
+      ) : (
+        ""
+      )}
+      <div className="ele js__container">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" />
+        <h3>Java SpringBoot</h3>
+        <p>
+          Core + OOP + Collections
+          <br />
+          Exception Handling 
+          <br />
+          Dependency Injection
+          <br/>
+          Spring MVC
+          <br/>
+          Spring Data JPA (Postgresql)
+          <br />
+          Spring Security: Author/Authentication
+          <br />
+          RestAPI
+        </p>
+
+
+      </div>
+      <div className="ele js__container">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" />
+        <h3>NodeJS</h3>
+        <p>
+          Core (async, event driven)
+          <br />
+          HTTP/HTTPs request
+          <br />
+          Express.js
+          <br />
+          Middleware
+          <br />
+          Depolyment (AWS)
+        </p>
+     
+      </div>
+      <button className="licenseButton" onClick={handleOpenNoti}>CERTIFICATE</button>
+
+    </div>
+  );
+};

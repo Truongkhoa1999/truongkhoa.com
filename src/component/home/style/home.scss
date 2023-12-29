@@ -1,4 +1,4 @@
-@import '../../../colors/colorpreset.scss';
+@import "../../../colors/colorpreset.scss";
 
 // General
 .home__container {
@@ -10,8 +10,18 @@
   margin-top: 2rem;
   padding-bottom: 10rem;
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
+  video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
   .biotext__container {
     display: flex;
 
@@ -45,77 +55,16 @@
         font-weight: bold;
         text-align: left;
         width: 260px;
-        // height: 81px;
-        // padding: 1rem;
-        padding: 1rem;
         text-decoration: none;
         margin-top: 1rem;
-        box-shadow: 0 15px 5px gray;
-&:hover{
-  color:$secondary-color;
-  box-shadow: none;
-}
+        padding: 10px;
+        &:hover {
+          color: $secondary-color;
+          box-shadow: none;
+        }
       }
-    }
- 
-    .bioPro__container {
-      background-image: url("https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/biopic.avif?alt=media&token=4e611f18-d60f-4769-b114-5c6878029f04");
-      width: 305px;
-      height: 429px;
-      background-position: center;
-      background-size: cover;
-      border: 5px solid $secondary-color;
-
-    }
-
-  }
-
-  .code__container {
-    border: 1px solid white;
-    align-self: center;
-    color: white;
-    width: 90%;
-    text-align: left;
-    white-space: pre-line;
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    background-color: black;
-    border: 2px solid black;
-
-    .macos__nav {
-      display: flex;
-      flex-direction: row;
-      background-color: white;
-      margin: 0;
-      padding: 0;
-      padding: 10px;
-
-      .circle {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        margin-left: 4px;
-      }
-
-      .circle:first-child {
-        background-color: #fe6257;
-      }
-
-      .circle:nth-child(2) {
-        background-color: #ffbc2e;
-      }
-
-      .circle:last-child {
-        background-color: #27c83f;
-      }
-    }
-
-    .code__content {
-      margin: 2rem 0 2rem 2rem;
-
     }
   }
-
 }
 
 // Desktop
@@ -123,7 +72,17 @@
   .home__container {
     flex-direction: column;
     width: 90%;
-
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+    }
     .biotext__container {
       width: 90%;
       margin-left: 2rem;
@@ -133,36 +92,23 @@
         width: 70%;
 
         .typorgraphy {
-          font-size: 80px;
+          font-size: 4rem;
           align-self: normal;
-          width: 70%;
-          padding: 0;
+          padding: 1rem;
           overflow: hidden;
         }
 
         .description {
           margin-top: 2rem;
-          font-size: 30px;
           align-self: normal;
           overflow: hidden;
-
         }
       }
-    }
-
-
-    .code__container {
-      border: 5px solid $secondary-color;
-      margin-left: 2rem;
-      margin-top: 6rem;
-      align-self: auto;
-      overflow: hidden;
-
     }
   }
 }
 // Mobile
-@media (max-width: 500px){
+@media (max-width: 500px) {
   .home__container {
     display: flex;
     .biotext__container {
@@ -174,7 +120,7 @@
         display: flex;
         flex-direction: column;
         height: auto;
-        
+
         margin-bottom: 20px;
         .typorgraphy {
           font-size: 1.5rem;
@@ -193,9 +139,7 @@
           box-shadow: none;
           height: 50px;
           margin-top: 1rem;
-         
         }
-  
       }
       .bioPro__container {
         width: 50%;
@@ -204,22 +148,8 @@
         background-position: center;
         background-size: cover;
         border: 2px solid $secondary-color;
-      // height: auto;
-
-      }
-  
-    }
-  
-    .code__container {
-
-      width: 90%;
-      
-  
-      .code__content {
-        margin: 2rem 0 2rem 2rem;
-  
+        // height: auto;
       }
     }
-  
   }
 }

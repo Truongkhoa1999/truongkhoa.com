@@ -1,51 +1,60 @@
 @import "../../../colors/colorpreset.scss";
 // general and mobile
-.fe__container{
-display: flex;
-flex-wrap: wrap;
-align-self: center;
-margin-top: 20px;
-padding-bottom: 7rem;
-img{
-    width: 15%;
-   
+.fe__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  margin-top: 20px;
+  padding-bottom: 7rem;
+  img {
+    width: 20%;
     // background-color: gray;
-}   
-img + img{
+  }
+  img + img {
     margin-left: 10px;
-}
-.ele{
+  }
+  .ele {
     width: calc(90% - 10px);
     margin-top: 20px;
-img , h3, p{
-    margin-bottom: 10px;
-}
-h3{
-color: $primary-color;
-}
-a{
-    // color: $secondary-color;
+    border: 1px solid red;
+    border-image: linear-gradient(to right, #ff0000, #00ff00);
+  border-image-slice: 1;
+    background-color: rgba(210, 210, 210, 0.755);
+    margin-left: .75rem;
+    height: 20rem;
+    padding: 1rem;
+    img,
+    h3,
+    p {
+      margin-bottom: 10px;
+    }
+    h3 {
+      color: $primary-color;
+    }
+  }
+  .licenseButton {
     color: $supportive-color;
     text-decoration: none;
     border: 1px solid green;
     padding: 4px;
     background-color: $primary-color;
-    &:hover{
-        background-color: $supportive-color;
-        color: $secondary-color;
-    }
-}
+    margin-left: 10px;
+ height: 20rem;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-top: 20px;
 
-// h3,p,a{
-//     margin-left: 30px;
-// }
-}
-}
-@media (min-width:950px){
-    .fe__container{
-        .ele{
-            width: calc(33.33% - 10px);
-        }
+    &:hover {
+      background-color: $supportive-color;
+      color: $secondary-color;
+      cursor: pointer;
     }
-
+  }
+}
+@media (min-width: 950px) {
+  .fe__container {
+    .ele {
+      width: 30rem;
+    }
+  }
 }

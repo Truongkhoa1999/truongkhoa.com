@@ -15,7 +15,7 @@ const CRTScreen: React.FC = () => {
     const material = new THREE.MeshBasicMaterial({
       color: 0x00ff00,
       wireframe: true,
-      side: THREE.DoubleSide, // Hiển thị cả hai mặt của hình cầu
+      side: THREE.DoubleSide, 
     });
     const sphere = new THREE.Mesh(geometry, material);
     scene.add(sphere);
@@ -24,7 +24,7 @@ const CRTScreen: React.FC = () => {
 
     const animate = () => {
       requestAnimationFrame(animate);
-      sphere.rotation.x += 0.005; // Tăng độ nghiêng để tạo hiệu ứng chuyển động
+      sphere.rotation.x += 0.005;
       sphere.rotation.y += 0.005;
       renderer.render(scene, camera);
     };
@@ -32,7 +32,6 @@ const CRTScreen: React.FC = () => {
     animate();
 
     return () => {
-      // Cleanup code if necessary
     };
   }, []);
 

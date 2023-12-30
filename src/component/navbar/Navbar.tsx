@@ -17,11 +17,12 @@ export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
   let navigate = useNavigate();
 
   const handleSwitchStack = (stackTitle:string) => {
-    navigate(`/homepage/stacks/${stackTitle}`)
+    navigate(`homepage/stacks/${stackTitle}`)
 }
   const handleElmentClicked = (element: string) => {
     setActiveElement(element);
     handleSwitchElements(element);
+    handleSwitchStack("Frontend")
     element === "stacks"? chageStackExtendVisibility(false) :chageStackExtendVisibility(true)
 
   };

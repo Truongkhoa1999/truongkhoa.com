@@ -7,42 +7,39 @@ import { DatabaseStack } from "./DatabaseStack";
 import { CloudStack } from "./CloudStack";
 import { DevopStack } from "./DevopStack";
 import { useParams } from "react-router-dom";
-import { Stack3D } from "./Stack3D";
+import CRTScreen from "./CRTcreen";
 
 export const Stacks = () => {
   const [stack, setStack] = useState<string>("Frontend");
   const params = useParams();
-  const paramsKey = Object.keys(params)[0] ;
-  const paramsValue = params[paramsKey as keyof typeof params];
-  console.log(typeof paramsValue)
-
+  const paramsKey = Object.keys(params)[0];
+  let paramsValue = params[paramsKey as keyof typeof params];
+  console.log(params)
   const handleStacks = (paramsValue: string) => {
-const regex = /\/([^/]+)$/;
-const lastStringStack = paramsValue.match(regex)
-if(lastStringStack && lastStringStack.length > 1 ){
-setStack(lastStringStack[1])
-}
+    const regex = /\/([^/]+)$/;
+    const lastStringStack = paramsValue.match(regex)
+    if (lastStringStack && lastStringStack.length > 1) {
+      setStack(lastStringStack[1])
+    }
 
   }
- 
+
   useEffect(() => {
     handleStacks(paramsValue!)
-    console.log(stack)
- ;  },[params])
+  }, [params])
 
   return (
     <div className="stacks">
-
-<h1>{stack}</h1>
+<CRTScreen />
+      <h1>{stack}</h1>
       <div>
-                {
-                    stack === "Frontend" ? <FrontendStack /> : stack === "Backend" ? <BackendStack /> : stack === "Database" ? <DatabaseStack /> : stack === "Cloud" ? <CloudStack /> : stack === "DevOps"?<DevopStack/>:""
-                }
-            </div>
+        {
+          stack === "Frontend" ? <FrontendStack /> : stack === "Backend" ? <BackendStack /> : stack === "Database" ? <DatabaseStack /> : stack === "Cloud" ? <CloudStack /> : stack === "DevOps" ? <DevopStack /> : ""
+        }
+      </div>
 
-    
-  
+
+
     </div>
   );
 };
-  

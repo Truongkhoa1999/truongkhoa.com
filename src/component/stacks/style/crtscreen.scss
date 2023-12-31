@@ -1,9 +1,9 @@
-.container_sphere{
-    z-index: -1;
-    position: absolute;
-    top: 20%;
-    bottom: 20%;
-
-    overflow: hidden;
-    width: 10%;
+.container_sphere {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+//   border: 1px solid red;
+  overflow: hidden;
+  width: 10%;
 }

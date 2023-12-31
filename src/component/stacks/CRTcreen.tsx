@@ -9,9 +9,9 @@ const CRTScreen: React.FC = () => {
     const camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 1000);
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current! });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(450, 350);
 
-    const geometry = new THREE.SphereGeometry(5, 32, 32);
+    const geometry = new THREE.SphereGeometry(10, 30, 30);
     const material = new THREE.MeshBasicMaterial({
       color: 0x00ff00,
       wireframe: true,

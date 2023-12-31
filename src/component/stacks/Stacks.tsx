@@ -7,7 +7,6 @@ import { DatabaseStack } from "./DatabaseStack";
 import { CloudStack } from "./CloudStack";
 import { DevopStack } from "./DevopStack";
 import { useParams } from "react-router-dom";
-import CRTScreen from "./CRTcreen";
 
 export const Stacks = () => {
   const [stack, setStack] = useState<string>("Frontend");
@@ -30,7 +29,6 @@ export const Stacks = () => {
 
   return (
     <div className="stacks">
-<CRTScreen />
       <h1>{stack}</h1>
       <div>
         {

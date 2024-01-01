@@ -11,7 +11,6 @@ export const DatabaseStack = () => {
       {isExpandedCertificate ? (
         <ExpandedCertificate
           setIsExpandedCertificate={setIsExpandedCertificate}
-          stackModule="Database"
         />
       ) : (
         ""

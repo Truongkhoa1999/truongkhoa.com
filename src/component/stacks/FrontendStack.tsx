@@ -13,7 +13,6 @@ export const FrontendStack = () => {
       {isExpandedCertificate ? (
         <ExpandedCertificate
           setIsExpandedCertificate={setIsExpandedCertificate}
-          stackModule="Frontend"
         />
       ) : (
         ""

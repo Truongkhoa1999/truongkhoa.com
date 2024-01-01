@@ -35,6 +35,7 @@ export const Stacks = () => {
           stack === "Frontend" ? <FrontendStack /> : stack === "Backend" ? <BackendStack /> : stack === "Database" ? <DatabaseStack /> : stack === "Cloud" ? <CloudStack /> : stack === "DevOps" ? <DevopStack /> : ""
         }
       </div>
+      <div className="checkerboard"></div>
 
 
 

@@ -3,17 +3,20 @@ import * as THREE from 'three';
 import './style/crtscreen.scss'
 const CRTScreen: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const width = isMobile ? 0 :450
+const height = isMobile? 0: 250
   useEffect(() => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 1000);
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current! });
-    renderer.setSize(450, 350);
+    renderer.setSize(width, height);
+    renderer.setClearColor("#1D1C1C");
 
     const geometry = new THREE.SphereGeometry(10, 30, 30);
     const material = new THREE.MeshBasicMaterial({
-      color: 0x00ff00,
+      color: "wheat",
       wireframe: true,
       side: THREE.DoubleSide, 
     });

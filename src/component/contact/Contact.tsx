@@ -8,9 +8,7 @@ export const Contact = () => {
       <CRTScreen />
       <h1 className="sitename">Contact</h1>
       <p>
-        Welcome to my World. Dont hesitate getting in touch with me. I am happy
-        to recive new project offers. Please hit my email via the form below!
-        Good day to you.
+        Happy New Year, Hit me up with any matters.
       </p>
       <form action="https://formspree.io/f/mrgwyjbr" method="POST">
         <input

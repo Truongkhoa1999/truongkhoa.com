@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
         <div>
           <div className="info__container">
             <h1 className="logo" onClick={() => handleSwitchElements("about")}>
-              TRUONG KHOA
+              TK
             </h1>
             <div className="ic_container">
               <a

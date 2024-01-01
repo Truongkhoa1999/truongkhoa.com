@@ -9,9 +9,7 @@
   margin-right: auto;
   margin-top: 2rem;
   padding-bottom: 10rem;
-
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
   video {
     position: absolute;
     width: 100%;
@@ -24,18 +22,17 @@
   }
   .biotext__container {
     display: flex;
-
     .textGr {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
+      margin-top: 2rem;
       .typorgraphy {
         font-size: 4rem;
         font-weight: lighter;
         width: 90%;
         color: $primary-color;
-        padding: 1rem;
+        margin-top: 5rem;
         letter-spacing: 2px;
       }
 
@@ -43,27 +40,33 @@
         color: $primary-color;
         width: 90%;
         align-self: center;
-        margin-top: 1rem;
-        padding: 1rem;
+        margin-top: 5rem;
         font-weight: lighter;
       }
 
       .viewbutton {
         font-size: 20px;
         color: white;
-        background-color: $primary-color;
+        background-color: transparent;
         font-weight: bold;
         text-align: left;
         width: 260px;
         text-decoration: none;
-        margin-top: 1rem;
+        margin-top: 5rem;
         padding: 10px;
+        border: 1px solid wheat;
         &:hover {
-          color: $secondary-color;
+          color: black;
           box-shadow: none;
+          background-color: white;
         }
       }
     }
+  }
+  .Source{
+    position:fixed;
+    bottom: 10%;
+    right: 5%;
   }
 }
 
@@ -94,7 +97,6 @@
         .typorgraphy {
           font-size: 4rem;
           align-self: normal;
-          padding: 1rem;
           overflow: hidden;
         }
 

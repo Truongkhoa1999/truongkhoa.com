@@ -66,7 +66,8 @@
       }
     }
     &:hover{
-      background-color: wheat;
+      background-color: transparent;
+      border: 1px solid wheat;
     }
     .projectInfo{
       margin-top: 2rem;

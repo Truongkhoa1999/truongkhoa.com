@@ -1,7 +1,7 @@
 // Style
 
 import "./style/home.scss";
-import background from "../../assets/video/background.mp4";
+import background from "../../assets/video/bk.mp4";
 
 export const Home = () => {
   return (
@@ -25,7 +25,7 @@ export const Home = () => {
           </a>
         </div>
       </div>
-      <p className="Source">WWDC 2019</p> 
+      <p className="Source">WWDC-2019</p> 
     </div>
   );
 };

@@ -8,6 +8,18 @@
   padding-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
+  .background{
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+    background-image: url("https://images.unsplash.com/photo-1625521785293-9bf72185da79?q=80&w=4472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
   .sitename{
     font-size: 50px;
     font-weight: bold;

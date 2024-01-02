@@ -10,6 +10,11 @@ export const FrontendStack = () => {
 
   return (
     <div className="fe__container">
+      <div className="certificate__holder"> <p>Wonder how I obtained those stacks? Check my </p>
+        <button className="licenseButton" onClick={handleOpenNoti}>
+          CERTIFICATE
+        </button>
+      </div>
       {isExpandedCertificate ? (
         <ExpandedCertificate
           setIsExpandedCertificate={setIsExpandedCertificate}
@@ -87,7 +92,7 @@ export const FrontendStack = () => {
           API interaction
           <br />
           UI Mockup (loading notifcation)
-          <br/>
+          <br />
           Redux Core (store action reducers)
           <br />
           Dispatch
@@ -97,9 +102,7 @@ export const FrontendStack = () => {
           Manage actions & states with Redux
         </p>
       </div>
-      <button className="licenseButton" onClick={handleOpenNoti}>
-        CERTIFICATE
-      </button>
+
     </div>
   );
 };

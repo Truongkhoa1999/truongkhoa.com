@@ -12,7 +12,7 @@ const height = isMobile? 0: 250
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current! });
     renderer.setSize(width, height);
-    renderer.setClearColor("#1D1C1C");
+    renderer.setClearColor(0x000000, 0); // Use 0x000000 as the color and 0 for alpha
 
     const geometry = new THREE.SphereGeometry(10, 30, 30);
     const material = new THREE.MeshBasicMaterial({

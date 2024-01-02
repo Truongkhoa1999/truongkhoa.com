@@ -32,6 +32,8 @@ export const Contact = () => {
         />
         <input type="submit" value="Submit" />
       </form>
+      <div className="background"></div>
+
     </div>
   );
 };

@@ -52,19 +52,20 @@
     }
   }
 }
-@media (min-width:791px){
+
+@media (min-width:791px) {
   .animated-square {
     width: 50%;
     height: 200px;
     position: relative;
     overflow: hidden;
   }
-  
+
   .checkerboard {
-    width: 15vw;
-    height: 70vh;
+    width: 5vw;
     right: 0;
-  top: 0;
+    top: 0;
+    bottom: 0;
     position: absolute;
     overflow: hidden;
     background: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);

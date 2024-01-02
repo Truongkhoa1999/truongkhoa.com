@@ -8,6 +8,11 @@ export const DatabaseStack = () => {
   };
   return (
     <div className="fe__container">
+         <div className="certificate__holder"> <p>Wonder how I obtained those stacks? Check my </p>
+        <button className="licenseButton" onClick={handleOpenNoti}>
+          CERTIFICATE
+        </button>
+      </div>
       {isExpandedCertificate ? (
         <ExpandedCertificate
           setIsExpandedCertificate={setIsExpandedCertificate}
@@ -41,9 +46,6 @@ export const DatabaseStack = () => {
           Schema
         </p>
       </div>
-      <button className="licenseButton" onClick={handleOpenNoti}>
-        CERTIFICATE
-      </button>
     </div>
   );
 };

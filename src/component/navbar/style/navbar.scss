@@ -18,15 +18,15 @@
     padding: 4px;
     cursor: pointer;
     border: none;
-    background-color: $supportive-color;
+    background-color: $secondary-color;
 
     &:hover {
-      background-color: $secondary-color;
+      background-color: $supportive-color;
     }
     .line {
       width: 100%;
-      border-bottom: 5px solid $primary-color;
-      margin-top: 2px;
+      border-bottom: 2px solid black;
+      margin-top: 4px;
     }
   }
 }
@@ -34,7 +34,11 @@
 .navbar__container-active {
   z-index: 0;
   border: 2px solid wheat;
-
+  // background-image: url("https://images.unsplash.com/photo-1677022719836-2b0cb3d18bc2?q=80&w=4160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  // background-position: center;
+  // background-size: cover;
+  background-color: transparent;
+  // background-color: rgba(78, 70, 50, 0.516);
   .hamburger__button {
     width: 30px;
     height: 30px;
@@ -44,14 +48,14 @@
     padding: 4px;
     cursor: pointer;
     border: none;
-
+    background-color: $secondary-color;
     &:hover {
-      background-color: $secondary-color;
+      background-color: $supportive-color;
     }
     .line {
       width: 100%;
-      border-bottom: 5px solid $primary-color;
-      margin-top: 2px;
+      border-bottom: 2px solid black;
+      margin-top: 4px;
     }
   }
 
@@ -148,7 +152,7 @@
       }
 
       .li-inactive {
-        color: $supportive-color;
+        color: $primary-color;
       }
     }
   }
@@ -211,7 +215,6 @@
         }
       }
     }
-
     .ul__container {
 
       ul {
@@ -226,12 +229,11 @@
     }
   }
 }
-
 @media (min-width: 791px) {
   .navbar__container-active {
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
-    width: 22%;
+    width: 15%;
     min-height: 100%;
     padding-bottom: 2rem;
     left: 0;
@@ -243,7 +245,6 @@
       align-self: center;
       margin-top: 20px;
       background-color: transparent;
-
       ul {
         display: flex;
         font-weight: bold;
@@ -251,10 +252,9 @@
         margin-left: auto;
         margin-right: auto;
         width: 80%;
-
         li {
           width: auto;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
         }
 
         li + li {
@@ -289,7 +289,6 @@
         font-weight: bold;
         margin-top: 50px;
       }
-
       .profile__img {
         display: block;
         width: 167px;
@@ -299,9 +298,6 @@
         align-self: center;
         margin-top: 40px;
       }
-
-
-
       .ic_container {
         flex-wrap: wrap;
         flex-direction: row;
@@ -318,7 +314,7 @@
 
 @media (min-width: 1500px) {
   .navbar__container-active {
-    width: 20%;
+    width: 18%;
 
     .ul__container {
       background-color: transparent;
@@ -347,7 +343,7 @@
       }
     }
     .ul__container {
-
+      background-color: black;
       ul {
         li {
           margin-left: 10px;

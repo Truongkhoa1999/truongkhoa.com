@@ -3,12 +3,11 @@
 .navbar__container-deactive {
   transform: translateX(-2%);
   transition: transform 0.3s ease-out;
-  z-index: 0;
+  z-index: 1;
 
 }
 .navbar__container {
-  z-index: 0;
-
+  z-index: 1;
   .hamburger__button {
     width: 30px;
     height: 30px;
@@ -34,11 +33,7 @@
 .navbar__container-active {
   z-index: 0;
   border: 2px solid wheat;
-  // background-image: url("https://images.unsplash.com/photo-1677022719836-2b0cb3d18bc2?q=80&w=4160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  // background-position: center;
-  // background-size: cover;
   background-color: transparent;
-  // background-color: rgba(78, 70, 50, 0.516);
   .hamburger__button {
     width: 30px;
     height: 30px;
@@ -83,6 +78,7 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
+    z-index: 1;
 
     .logo {
       background-color: transparent;

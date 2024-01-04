@@ -29,6 +29,7 @@ export const Stacks = () => {
 
   return (
     <div className="stacks">
+      <div className="background"></div>
       <div className="checkerboard"></div>
 
       <h1>{stack}</h1>

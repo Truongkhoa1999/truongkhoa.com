@@ -19,6 +19,7 @@ export const Projects = () => {
 
   return (
     <div className="projects__container">
+    <div className="background"></div>
       {projectData.map((i, index) => (
         <a href={i.link} target="_blank" key={Math.random()}>
           <div className="project__card" key={index}>

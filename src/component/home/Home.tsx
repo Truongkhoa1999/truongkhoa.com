@@ -1,7 +1,6 @@
 // Style
 
 import "./style/home.scss";
-import background from "../../assets/video/bk.mp4";
 
 export const Home = () => {
   return (

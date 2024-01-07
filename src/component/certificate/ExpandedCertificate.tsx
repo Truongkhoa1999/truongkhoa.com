@@ -25,8 +25,8 @@ export const ExpandedCertificate: React.FC<ExpandedCertiProps> = ({
           <br />
           <p>Trainee & Intership</p>
           <a href="">Integrify fs-14 Fullstack Overall 4.0</a>
-          <a>Dzistar Wordpress Designer Passed</a>
-          <a>Mehtaheino 3D Industry Fit To Project Passed</a>
+          <a>Dzistar, Wordpress Designer </a>
+          <a>Mehtaheino 3D Industry Fit To Project, React Developer</a>
           <br />
           <p>Self Studies</p>
           <a href="https://www.freecodecamp.org/certification/Khoa99/responsive-web-design">

@@ -12,7 +12,7 @@ export const Home = () => {
       <div className="biotext__container">
         <div className="textGr">
           <h1 className="typorgraphy">TRUONG KHOA </h1>
-          <h2> FULLSTACK DEVELOPER AND UI DESIGNER</h2>
+          <h2> FULLSTACK DEVELOPER AND UX DESIGNER</h2>
           <h3 className="description">
             TypeScript JavaScript HTML SCSS JAVA C# PostgreSQL MongoDB AWS .NET
           </h3>

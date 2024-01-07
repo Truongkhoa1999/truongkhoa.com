@@ -9,11 +9,11 @@ export const Projects = () => {
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setIsLoading(false); // Set isLoading to false after 3 seconds
+      setIsLoading(false); 
     }, 3000);
 
     return () => {
-      clearTimeout(timeoutId); // Clear the timeout when component unmounts
+      clearTimeout(timeoutId);
     };
   }, []);
 
@@ -29,7 +29,6 @@ export const Projects = () => {
               alt="image__thumbnail"
               className={isLoading?"image--loading":"loadedImage"}
             />}
-
             <div className="projectInfo">
               <h2>{i.name}</h2>
               <h3>{i.role}</h3>
@@ -39,9 +38,8 @@ export const Projects = () => {
                     <span key={techIndex}>{tech}</span>
                   ))}
                 </p>
-              </div>{" "}
+              </div>
             </div>
-
           </div>
         </a>
       ))}

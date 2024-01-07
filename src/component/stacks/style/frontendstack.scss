@@ -11,7 +11,9 @@
     position: fixed;
     bottom: 0;
     display: flex;
-    background-color: $primary-color;
+    // background-color: $primary-color;
+    background-color:#4e3d2e;
+
     width: 100%;
     right: 0;
     align-items: center;
@@ -19,14 +21,16 @@
     padding: .5rem;
     p{
       margin-left: 1rem;
+      color: white;
     }
     .licenseButton {
-      color: black;
+      color: white;
       text-decoration: none;
       padding: 10px;
-      background-color: $supportive-color;
+      // background-color: $supportive-color;
+      background-color: #b4935d;
+
       margin-left: 2rem;
-      // height: 1rem;
       font-size: 1rem;
       padding: 1rem;
       text-align: center;
@@ -40,7 +44,6 @@
   }
   img {
     width: 20%;
-    // background-color: gray;
   }
 
   img+img {
@@ -55,7 +58,6 @@
     height: 20rem;
     padding: 1rem;
     color: white;
-
     img,
     h3,
     p {

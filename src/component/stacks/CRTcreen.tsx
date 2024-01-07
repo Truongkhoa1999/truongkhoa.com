@@ -16,7 +16,7 @@ const height = isMobile? 0: 250
 
     const geometry = new THREE.SphereGeometry(10, 30, 30);
     const material = new THREE.MeshBasicMaterial({
-      color: "wheat",
+      color: "#4e3d2e",
       wireframe: true,
       side: THREE.DoubleSide, 
     });

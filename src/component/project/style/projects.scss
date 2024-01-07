@@ -1,5 +1,5 @@
 @import "../../../colors/colorpreset.scss";
-// general and mobile phone
+// general
 .projects__container {
   margin-top: 2rem;
   width: 80%;
@@ -8,17 +8,7 @@
   margin-left: auto;
   margin-right: auto;
   font-family: Futura;
-  // .background{
-  //   position: absolute;
-  //   left: 0;
-  //   top:0;
-  //   bottom: 0;
-  //   width: 100%;
-  //   height: 100vh;
-  //   padding: 2rem;
-  //   z-index: -1;
-  //   background-color: #f8be41;
-  // }
+  
   h2,
   h3 {
     font-weight: normal;
@@ -42,10 +32,10 @@
     width: 30rem;
     z-index: 0;
     padding: 1rem;
+    background-color:#4e3d2e;
     .item--loading{
       background: #eee;
       background: linear-gradient(110deg, #f9f6f1 8%, #faefd7 18%, #f9ecd1 33%);
-      border-radius: 10px solid red;
       background-size: 200% 100%;
       animation: 1.5s shine linear infinite;
       height: 200px;
@@ -94,4 +84,89 @@
     }
   }
 }
-// 
+// mobile
+@media (max-width: 567px){
+  .projects__container {
+    margin-top: 2rem;
+    width: 90%;
+    display: flex;
+    // flex-wrap: wrap;
+    // margin-left: auto;
+    // margin-right: auto;
+    font-family: Futura;
+    h2,
+    h3 {
+      font-weight: normal;
+      color: $primary-color;
+    }
+    p {
+      color: $secondary-color;
+    }
+    a {
+      text-decoration: none;
+    }
+    @media (max-width: 790px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    gap: 1rem;
+    margin-bottom: 5rem;
+  
+    .project__card {
+      height: 30rem;
+      width: 90%;
+      z-index: 0;
+      padding: 1rem;
+      background-color:#4e3d2e;
+      .item--loading{
+        background: #eee;
+        background: linear-gradient(110deg, #f9f6f1 8%, #faefd7 18%, #f9ecd1 33%);
+        background-size: 200% 100%;
+        animation: 1.5s shine linear infinite;
+        height: 200px;
+      }
+      @keyframes shine {
+        to {
+          background-position-x: -200%;
+        }
+      }
+      .imageLoading{
+        display: none;
+      }
+      .loadedImage {
+        width: 100%;
+        overflow: hidden;
+        filter: grayscale(100%);
+        padding: 2px;
+        @media (min-width: 768px) {
+          width: 100%;
+          display: block;
+          overflow: auto;
+        }
+        // &:hover {
+        //   cursor: pointer;
+        //   transition: 1s;
+        //   filter: grayscale(0%);
+        //   overflow: hidden;
+          
+        // }
+      }
+      &:hover{
+        background-color: transparent;
+        border: 1px solid wheat;
+      }
+      .projectInfo{
+        margin-top: 2rem;
+        h2{
+          font-size: 2rem;
+        }
+        h3{
+          font-size: 1.5rem;
+        }
+        p{
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

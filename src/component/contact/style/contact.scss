@@ -8,7 +8,7 @@
   padding-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
-  .background{
+  .background {
     width: 100%;
     position: absolute;
     height: 100vh;
@@ -16,11 +16,11 @@
     top: 0;
     bottom: 0;
     z-index: -2;
-    background-image: url("https://images.unsplash.com/photo-1625521785293-9bf72185da79?q=80&w=4472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.unsplash.com/photo-1571845615528-6d8d60c459ef?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-position: center;
     background-size: cover;
-}
-  .sitename{
+  }
+  .sitename {
     font-size: 50px;
     font-weight: bold;
     color: $primary-color;
@@ -42,17 +42,17 @@
     width: 90%;
     input {
       width: 90%;
-      
       margin-top: 1rem;
       padding: 1rem;
       font-family: Futura;
       color: $supportive-color;
-    border: 1px solid $primary-color;
-
+      background-color:rgb(187, 180, 168);
+      border: 4px solid #4e3d2e;
+      color: black;
     }
     input:last-child {
       border: 1px solid $primary-color;
-      color: $supportive-color ;
+      color: $supportive-color;
       background-color: transparent;
       width: 50%;
       font-size: 15px;
@@ -66,7 +66,7 @@
   .contact__wrapper {
     // margin-top: 8rem;
     align-items: flex-start;
-  width: 90%;
+    width: 90%;
 
     p {
       text-align: left;
@@ -77,12 +77,11 @@
       align-items: start;
       input {
         width: 45%;
-       background-color: transparent;
-       padding: 2rem;
+        padding: 2rem;
       }
       input:last-child {
         width: 20%;
-        &:hover{
+        &:hover {
           cursor: pointer;
           background-color: $primary-color;
           color: $secondary-color;

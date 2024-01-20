@@ -36,8 +36,8 @@
   border: 2px solid wheat;
 
   .hamburger__button {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -155,6 +155,7 @@
 }
 
 // Desktop
+<<<<<<< Updated upstream
 @media (max-width: 769px) {
   .navbar__container-active {
     display: block;
@@ -237,28 +238,42 @@
     left: 0;
     display: block;
     padding: 1rem;
+=======
+@media (min-width: 691px) {
+  .navbar__container-active {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+>>>>>>> Stashed changes
     .ul__container {
       display: flex;
+      flex-direction: row;
       width: 100%;
-      align-self: center;
-      margin-top: 20px;
+      // align-self: center;
+      // margin-top: 20px;
+      align-items: flex-start;
+      justify-content: flex-start;
       background-color: transparent;
-
       ul {
         display: flex;
+        flex-direction: row;
         font-weight: bold;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-
+       justify-content: space-evenly;
+        width: 100%;
+        padding: 0;
         li {
           width: auto;
           font-size: 1.2rem;
+<<<<<<< Updated upstream
         }
 
         li + li {
           margin-top: 20px;
+=======
+          // margin-left: 10rem;
+>>>>>>> Stashed changes
         }
       }
       .drop__menu {
@@ -278,6 +293,7 @@
       }
     }
 
+<<<<<<< Updated upstream
     .info__container {
       background-color: transparent;
       display: flex;
@@ -319,12 +335,20 @@
 @media (min-width: 1500px) {
   .navbar__container-active {
     width: 20%;
-
-    .ul__container {
-      background-color: transparent;
-    }
+=======
   }
 }
+
+// @media (min-width: 1500px) {
+//   .navbar__container-active {
+//     width: 18%;
+>>>>>>> Stashed changes
+
+//     .ul__container {
+//       background-color: transparent;
+//     }
+//   }
+// }
 
 // Mobile
 @media (max-width: 550px) {

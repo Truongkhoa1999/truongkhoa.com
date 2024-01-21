@@ -1,7 +1,7 @@
 // Fontawesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+// import { faGithub } from "@fortawesome/free-brands-svg-icons";
 // Style
 import "./style/navbar.scss";
 import { useState } from "react";
@@ -12,8 +12,7 @@ interface NavProps {
 }
 export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
   const [activeElement, setActiveElement] = useState("about");
-  const [isNavbarVisible, setIsNavbarVisible] = useState(false);
-  const [isStackExtendsVisible, setStackExtendsVisible] = useState(false);
+  // const [isStackExtendsVisible, setStackExtendsVisible] = useState(false);
   let navigate = useNavigate();
 
   const handleSwitchStack = (stackTitle:string) => {
@@ -23,52 +22,15 @@ export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
     setActiveElement(element);
     handleSwitchElements(element);
     handleSwitchStack("Frontend")
-    element === "stacks"? chageStackExtendVisibility(false) :chageStackExtendVisibility(true)
+    // element === "stacks"? chageStackExtendVisibility(false) :chageStackExtendVisibility(true)
 
-  };
-  const changeNavVisbislity = (isNavbarVisible: boolean) => {
-    setIsNavbarVisible(!isNavbarVisible);
-  };
-  const chageStackExtendVisibility = (isStackExtendsVisible: boolean) => {
-    setStackExtendsVisible(!isStackExtendsVisible);
   };
 
   return (
     <div
-      className={
-        isNavbarVisible
-          ? "navbar__container-active "
-          : "navbar__container-deactive navbar__container"
-      }
+      className="navbar__container"
     >
-      <button
-        className="hamburger__button"
-        onClick={() => {
-          changeNavVisbislity(isNavbarVisible);
-        }}
-      >
-        <span className="line"></span>
-        <span className="line"></span>
-        <span className="line"></span>
-      </button>
-      {isNavbarVisible ? (
-        <div>
-          <div className="info__container">
-            <h1 className="logo" onClick={() => handleSwitchElements("about")}>
-              TK
-            </h1>
-            <div className="ic_container">
-              <a
-                href="https://www.linkedin.com/in/khoa-truong-010999/"
-                target="_blank"
-              >
-                <FontAwesomeIcon className="fa" icon={faLinkedinIn} />
-              </a>
-              <a href="https://github.com/Truongkhoa1999" target="_blank">
-                <FontAwesomeIcon className="fa" icon={faGithub} />
-              </a>
-            </div>
-          </div>
+      
           <div className="ul__container">
             <ul>
               <li
@@ -89,17 +51,6 @@ export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
               >
                 STACKS
               </li>
-              {isStackExtendsVisible ? (
-                <div className="drop__menu">
-                <li onClick={() => handleSwitchStack("Frontend") } className="option">Frontend</li>
-                <li onClick={() => handleSwitchStack("Backend") } className="option">Backend</li>
-                <li onClick={() => handleSwitchStack("Database") } className="option">Databse</li>
-                <li onClick={() => handleSwitchStack("Cloud") } className="option">Cloud</li>
-                <li onClick={() => handleSwitchStack("DevOps") } className="option">Devops</li>
-                </div>
-              ) : (
-                ""
-              )}
               <li
                 className={
                   activeElement === "contact" ? "li-active" : "li-inactive"
@@ -119,9 +70,6 @@ export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
             </ul>
           </div>
         </div>
-      ) : (
-        ""
-      )}
-    </div>
+      
   );
 };

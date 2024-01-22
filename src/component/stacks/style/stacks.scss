@@ -1,98 +1,47 @@
 @import "../../../colors/colorpreset.scss";
-
-.stacks {
-  color: black;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
-  overflow-y: hidden;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: 2rem;
-  z-index: 0;
-// .background{
-//   width: 100%;
-//   position: fixed;
-//   height: 100vh;
-//   left: 0;
-//   // bottom: 0;
-//   z-index: -1;
-//   background-image: url("https://images.unsplash.com/photo-1589995186011-a7b485edc4bf?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-//   background-position: center;
-//   background-size: cover;
-// }
-  h1 {
-    font-size: 50px;
-    font-weight: bold;
-    color: $secondary-color;
+// general
+.stack__container {
+  width: 100%;
+  height: 100vh;
+  background-color: $primary-variant2-color;
+  display: flex;
+  flex-wrap: wrap;
+  .stack__group {
+    border: 1px solid blue;
     width: 100%;
-    margin-top: 2rem;
-  }
+    .stack__card{
+      width: 35%;
+    border: 1px solid red;
+    // .stack__card + .stack__card{
+    //   margin-left: 44px;
+    // }
 
-
-  @for $i from 1 through 15 {
-    .li-#{$i}:hover {
-      .name {
-        visibility: visible !important;
-      }
-
-      scale: 1.7;
-      cursor: pointer;
-      overflow: visible;
     }
   }
-}
-
-
-
-// Desktop
-
-@media (max-width: 769px) {
-  .stacks {
-    max-height: 90%;
-
+  .certificate__container {
+    border: 1px solid yellow;
+    width: 100%;
+    height: 8%;
   }
 }
 
+//   .checkerboard {
+//     width: 5vw;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     position: absolute;
+//     overflow: hidden;
+//     background: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
+//     background-size: 50px 50px;
+//     animation: moveCheckerboard 5s linear infinite;
+//   }
+// @keyframes moveCheckerboard {
+//   0% {
+//     background-position: 0 0;
+//   }
 
-@media (max-width: 500px) {
-  .stacks {
-    h1 {
-      font-size: 30px;
-    }
-  }
-}
-
-@media (min-width:791px) {
-  .animated-square {
-    width: 50%;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .checkerboard {
-    width: 5vw;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    overflow: hidden;
-    background: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
-    background-size: 50px 50px;
-    animation: moveCheckerboard 5s linear infinite;
-  }
-}
-
-
-
-
-@keyframes moveCheckerboard {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 50px 0;
-  }
-}
+//   100% {
+//     background-position: 50px 0;
+//   }
+// }

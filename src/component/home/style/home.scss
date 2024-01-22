@@ -30,15 +30,20 @@
       letter-spacing: 1.5rem;
     }
   }
-
-  .Source {
-    position: fixed;
-    bottom: 10%;
-    right: 5%;
-  }
 }
 
 // Desktop
+// macbook air 13inch
+@media(min-width: 1470px){
+  .home__container {
+    .biotext__container {
+      .textGr {
+        font-size: 2.5rem;
+        letter-spacing: 1.5rem;
+      }
+    }
+  }
+}
 
 // Mobile
 @media (max-width: 500px) {

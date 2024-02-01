@@ -5,7 +5,7 @@
 // Style
 import "./style/navbar.scss";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 // import { handleSwitchStack } from "../../utils/handleSwitchStack";
 interface NavProps {
   handleSwitchElements: (element: string) => void;
@@ -13,15 +13,15 @@ interface NavProps {
 export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
   const [activeElement, setActiveElement] = useState("about");
   // const [isStackExtendsVisible, setStackExtendsVisible] = useState(false);
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
 
-  const handleSwitchStack = (stackTitle:string) => {
-    navigate(`homepage/stacks/${stackTitle}`)
-}
+//   const handleSwitchStack = (stackTitle:string) => {
+//     navigate(`homepage/stacks/${stackTitle}`)
+// }
   const handleElmentClicked = (element: string) => {
     setActiveElement(element);
     handleSwitchElements(element);
-    handleSwitchStack("Frontend")
+    // handleSwitchStack("Frontend")
     // element === "stacks"? chageStackExtendVisibility(false) :chageStackExtendVisibility(true)
 
   };

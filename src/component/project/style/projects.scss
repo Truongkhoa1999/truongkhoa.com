@@ -1,170 +1,214 @@
 @import "../../../colors/colorpreset.scss";
 // general
-.projects__container {
-  margin-top: 2rem;
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: Futura;
-  
-  h2,
-  h3 {
-    font-weight: normal;
-    color: $primary-color;
-  }
-  p {
-    color: $secondary-color;
-  }
-  a {
-    text-decoration: none;
-  }
-  @media (max-width: 790px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  gap: 1rem;
-  margin-bottom: 5rem;
+// .projects__container {
+//   margin-top: 2rem;
+//   width: 80%;
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-left: auto;
+//   margin-right: auto;
+//   font-family: Futura;
 
-  .project__card {
-    height: 30rem;
-    width: 30rem;
-    z-index: 0;
-    padding: 1rem;
-    background-color:#4e3d2e;
-    .item--loading{
-      background: #eee;
-      background: linear-gradient(110deg, #f9f6f1 8%, #faefd7 18%, #f9ecd1 33%);
-      background-size: 200% 100%;
-      animation: 1.5s shine linear infinite;
-      height: 200px;
-    }
-    @keyframes shine {
-      to {
-        background-position-x: -200%;
-      }
-    }
-    .imageLoading{
-      display: none;
-    }
-    .loadedImage {
-      width: 80%;
-      overflow: hidden;
-      filter: grayscale(100%);
-      padding: 2px;
-      @media (min-width: 768px) {
-        width: 100%;
-        display: block;
-        overflow: auto;
-      }
-      &:hover {
-        cursor: pointer;
-        transition: 1s;
-        filter: grayscale(0%);
-        overflow: hidden;
-        
-      }
-    }
-    &:hover{
-      background-color: transparent;
-      border: 1px solid wheat;
-    }
-    .projectInfo{
-      margin-top: 2rem;
-      h2{
-        font-size: 2rem;
-      }
-      h3{
-        font-size: 1.5rem;
-      }
-      p{
-        font-size: 1.2rem;
-      }
-    }
-  }
-}
-// mobile
-@media (max-width: 567px){
-  .projects__container {
-    margin-top: 2rem;
+//   h2,
+//   h3 {
+//     font-weight: normal;
+//     color: $primary-color;
+//   }
+//   p {
+//     color: $secondary-color;
+//   }
+//   a {
+//     text-decoration: none;
+//   }
+//   @media (max-width: 790px) {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+//   gap: 1rem;
+//   margin-bottom: 5rem;
+
+//   .project__card {
+//     height: 30rem;
+//     width: 30rem;
+//     z-index: 0;
+//     padding: 1rem;
+//     background-color:#4e3d2e;
+//     .item--loading{
+//       background: #eee;
+//       background: linear-gradient(110deg, #f9f6f1 8%, #faefd7 18%, #f9ecd1 33%);
+//       background-size: 200% 100%;
+//       animation: 1.5s shine linear infinite;
+//       height: 200px;
+//     }
+//     @keyframes shine {
+//       to {
+//         background-position-x: -200%;
+//       }
+//     }
+//     .imageLoading{
+//       display: none;
+//     }
+//     .loadedImage {
+//       width: 80%;
+//       overflow: hidden;
+//       filter: grayscale(100%);
+//       padding: 2px;
+//       @media (min-width: 768px) {
+//         width: 100%;
+//         display: block;
+//         overflow: auto;
+//       }
+//       &:hover {
+//         cursor: pointer;
+//         transition: 1s;
+//         filter: grayscale(0%);
+//         overflow: hidden;
+
+//       }
+//     }
+//     &:hover{
+//       background-color: transparent;
+//       border: 1px solid wheat;
+//     }
+//     .projectInfo{
+//       margin-top: 2rem;
+//       h2{
+//         font-size: 2rem;
+//       }
+//       h3{
+//         font-size: 1.5rem;
+//       }
+//       p{
+//         font-size: 1.2rem;
+//       }
+//     }
+//   }
+// }
+// // mobile
+// @media (max-width: 567px){
+//   .projects__container {
+//     margin-top: 2rem;
+//     width: 90%;
+//     display: flex;
+//     // flex-wrap: wrap;
+//     // margin-left: auto;
+//     // margin-right: auto;
+//     font-family: Futura;
+//     h2,
+//     h3 {
+//       font-weight: normal;
+//       color: $primary-color;
+//     }
+//     p {
+//       color: $secondary-color;
+//     }
+//     a {
+//       text-decoration: none;
+//     }
+//     @media (max-width: 790px) {
+//       display: flex;
+//       flex-wrap: wrap;
+//     }
+//     gap: 1rem;
+//     margin-bottom: 5rem;
+
+//     .project__card {
+//       height: 30rem;
+//       width: 90%;
+//       z-index: 0;
+//       padding: 1rem;
+//       background-color:#4e3d2e;
+//       .item--loading{
+//         background: #eee;
+//         background: linear-gradient(110deg, #f9f6f1 8%, #faefd7 18%, #f9ecd1 33%);
+//         background-size: 200% 100%;
+//         animation: 1.5s shine linear infinite;
+//         height: 200px;
+//       }
+//       @keyframes shine {
+//         to {
+//           background-position-x: -200%;
+//         }
+//       }
+//       .imageLoading{
+//         display: none;
+//       }
+//       .loadedImage {
+//         width: 100%;
+//         overflow: hidden;
+//         filter: grayscale(100%);
+//         padding: 2px;
+//         @media (min-width: 768px) {
+//           width: 100%;
+//           display: block;
+//           overflow: auto;
+//         }
+//         // &:hover {
+//         //   cursor: pointer;
+//         //   transition: 1s;
+//         //   filter: grayscale(0%);
+//         //   overflow: hidden;
+
+//         // }
+//       }
+//       &:hover{
+//         background-color: transparent;
+//         border: 1px solid wheat;
+//       }
+//       .projectInfo{
+//         margin-top: 2rem;
+//         h2{
+//           font-size: 2rem;
+//         }
+//         h3{
+//           font-size: 1.5rem;
+//         }
+//         p{
+//           font-size: 1.2rem;
+//         }
+//       }
+//     }
+//   }
+// }
+// generall
+.projects__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-variant2-color;
+  .items__wrapper {
     width: 90%;
-    display: flex;
-    // flex-wrap: wrap;
-    // margin-left: auto;
-    // margin-right: auto;
-    font-family: Futura;
-    h2,
-    h3 {
-      font-weight: normal;
-      color: $primary-color;
-    }
-    p {
-      color: $secondary-color;
-    }
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0 4rem 0;
     a {
       text-decoration: none;
-    }
-    @media (max-width: 790px) {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    gap: 1rem;
-    margin-bottom: 5rem;
-  
-    .project__card {
-      height: 30rem;
-      width: 90%;
-      z-index: 0;
-      padding: 1rem;
-      background-color:#4e3d2e;
-      .item--loading{
-        background: #eee;
-        background: linear-gradient(110deg, #f9f6f1 8%, #faefd7 18%, #f9ecd1 33%);
-        background-size: 200% 100%;
-        animation: 1.5s shine linear infinite;
-        height: 200px;
-      }
-      @keyframes shine {
-        to {
-          background-position-x: -200%;
+
+      .project__card {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem;
+        background-color: $primary-color;
+        margin-top: 1rem;
+        &:hover {
+          background-color: $primary-variant3-color;
         }
-      }
-      .imageLoading{
-        display: none;
-      }
-      .loadedImage {
-        width: 100%;
-        overflow: hidden;
-        filter: grayscale(100%);
-        padding: 2px;
-        @media (min-width: 768px) {
-          width: 100%;
-          display: block;
-          overflow: auto;
+        .projectInfo {
+          color: white;
+          h2 {
+            color: $secondary-color;
+          }
+          h5 {
+            margin-top: 5px;
+          }
         }
-        // &:hover {
-        //   cursor: pointer;
-        //   transition: 1s;
-        //   filter: grayscale(0%);
-        //   overflow: hidden;
-          
-        // }
-      }
-      &:hover{
-        background-color: transparent;
-        border: 1px solid wheat;
-      }
-      .projectInfo{
-        margin-top: 2rem;
-        h2{
-          font-size: 2rem;
-        }
-        h3{
-          font-size: 1.5rem;
-        }
-        p{
-          font-size: 1.2rem;
+        img {
+          width: 20rem;
+          // height: 10px;
         }
       }
     }

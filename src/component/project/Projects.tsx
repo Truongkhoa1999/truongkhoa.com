@@ -19,7 +19,7 @@ export const Projects = () => {
 
   return (
     <div className="projects__container">
-    <div className="background"></div>
+      <div className="items__wrapper">
       {projectData.map((i, index) => (
         <a href={i.link} target="_blank" key={Math.random()}>
           <div className="project__card" key={index}>
@@ -31,11 +31,11 @@ export const Projects = () => {
             />}
             <div className="projectInfo">
               <h2>{i.name}</h2>
-              <h3>{i.role}</h3>
+              {/* <h3>{i.role}</h3> */}
               <div className="stack__wrapper">
                 <p>
                   {i.stack.map((tech, techIndex) => (
-                    <span key={techIndex}>{tech}</span>
+                    <h5 key={techIndex}>{tech}</h5>
                   ))}
                 </p>
               </div>
@@ -43,6 +43,8 @@ export const Projects = () => {
           </div>
         </a>
       ))}
+      </div>
+   
     </div>
   );
 

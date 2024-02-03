@@ -1,9 +1,12 @@
-import {  useRef, useState } from "react";
+import {  useEffect, useRef, useState } from "react";
 import "./style/stacks.scss";
 import { ExpandedCertificate } from "../certificate/ExpandedCertificate";
 
 
-export const Stacks = () => {
+interface StacksProps {
+  slideDirectionRef: React.MutableRefObject<string | null>;
+}
+export const Stacks:  React.FC<StacksProps> = ({ slideDirectionRef }) => {
 const [isExpandedNotificationVisible, setIsExpandedNotificationVisible] = useState<boolean>(false)
 
   const targetElementRef = useRef<HTMLDivElement>(null);
@@ -19,9 +22,11 @@ const [isExpandedNotificationVisible, setIsExpandedNotificationVisible] = useSta
   const handleSwitchNotificationStatus = () => {
     setIsExpandedNotificationVisible(true)
   }
-  
+  const slideDirection = slideDirectionRef.current;
+  console.log(slideDirection)
+
   return (
-    <div className="stack__container">
+    <div className={slideDirection === "sr"? "stack__container sr" : "stack__container sl"}>
       <div className="stack__group" >
         <div onClick={handleScrollToTarget} className="stack__card">
           <img

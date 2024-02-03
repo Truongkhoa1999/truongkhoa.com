@@ -3,9 +3,15 @@ import { useEffect, useState } from "react";
 import { projectsData } from "../../data/projectsData";
 // Style
 import "./style/projects.scss";
-export const Projects = () => {
+import { detectSwipeDirection } from "../../utils/detectSwipeDirection";
+export const Projects = ({destiny}:{destiny: string}) => {
   const projectData = projectsData;
   const [isLoading, setIsLoading] = useState(true);
+  const [slideDirection, setSlideDirection] = useState("")
+  useEffect(() => {
+    const slideDirection = detectSwipeDirection("about", destiny)
+    setSlideDirection(slideDirection)
+  }, [destiny])
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -16,10 +22,11 @@ export const Projects = () => {
       clearTimeout(timeoutId);
     };
   }, []);
+  
 
   return (
     <div className="projects__container">
-      <div className="items__wrapper">
+      <div className= {slideDirection === "sr"? "items__wrapper sr" : "items__wrapper sl"}>
       {projectData.map((i, index) => (
         <a href={i.link} target="_blank" key={Math.random()}>
           <div className="project__card" key={index}>

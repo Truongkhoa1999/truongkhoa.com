@@ -3,22 +3,23 @@ import { Navbar } from "../../component/navbar/Navbar";
 
 // style
 import "./style/homepage.scss";
-import { Home } from "../../component/home/Home";
 import { Projects } from "../../component/project/Projects";
 import { Contact } from "../../component/contact/Contact";
 import { Stacks } from "../../component/stacks/Stacks";
+import { About } from "../../component/home/About";
+import { useSlideDirection } from "../../utils/SlideDirectionContext";
 // import { Footer } from "../../component/footer/Footer";
 interface NavProps {
-  home: boolean;
+  about: boolean;
   contact: boolean;
   stacks: boolean;
   resume: boolean;
-  portfolio:boolean
+  portfolio: boolean
 }
 
 export const Homepage = () => {
   const [elementsState, setElementsState] = useState<NavProps>({
-    home: true,
+    about: true,
     stacks: false,
     resume: false,
     contact: false,
@@ -36,16 +37,19 @@ export const Homepage = () => {
       }
     }
     setElementsState(updatedObject);
+
   };
+  const slideDirectionRef = useSlideDirection();
+
   return (
     <div className="homepage__container">
       <Navbar handleSwitchElements={handleElementsAreClicked} />
       <div className="content__container">
-        {elementsState.home ? <Home /> : ""}
-        {elementsState.portfolio ? <Projects /> : ""}
-        {elementsState.contact ? <Contact /> : ""}
-        {elementsState.stacks ? <Stacks /> : ""}
-      </div>    
+        {elementsState.about ? <About slideDirectionRef={slideDirectionRef}  /> : ""}
+        {elementsState.portfolio ? <Projects  /> : ""}
+        {elementsState.contact ? <Contact  /> : ""}
+        {elementsState.stacks ? <Stacks slideDirectionRef={slideDirectionRef}  /> : ""}
+      </div>
       {/* <Footer /> */}
     </div>
   );

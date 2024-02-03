@@ -1,9 +1,16 @@
+import { useEffect, useState } from "react";
+import { detectSwipeDirection } from "../../utils/detectSwipeDirection";
 import "./style/contact.scss";
 // import "../stacks/style/crtscreen.scss";
 
-export const Contact = () => {
+export const Contact = ({destiny}:{destiny: string}) => {
+  const [slideDirection, setSlideDirection] = useState("")
+  useEffect(() => {
+    const slideDirection = detectSwipeDirection("about", destiny)
+    setSlideDirection(slideDirection)
+  }, [destiny])
   return (
-    <div className="contact__wrapper">
+    <div className={slideDirection === "sr"? "contact__wrapper sr" : "contact__wrapper sl"}>
       <div className="contact__container">
         <div className="generalInfo__container">
           <img

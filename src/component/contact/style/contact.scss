@@ -1,12 +1,23 @@
 @import "../../../colors/colorpreset.scss";
+@import "../../../utils//style/slideinanimation.scss";
 
 // General
+.sr {
+  animation: slideR 1s ease-in-out;
+}
+
+.sl {
+  animation: slideL 1s ease-in-out;
+}
+
 .contact__wrapper {
   height: 100vh;
   background-color: $primary-variant2-color;
   display: flex;
   align-items: center;
   justify-content: center;
+
+
   .contact__container {
     width: 83%;
     height: 77%;
@@ -15,19 +26,23 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: $primary-color;
+
     .generalInfo__container {
       img {
         margin-bottom: 55px;
       }
+
       p {
         font-weight: bold;
         font-size: 1.25rem;
         width: 22rem;
         margin-bottom: 55px;
       }
-      a + a {
+
+      a+a {
         margin-left: 20px;
       }
+
       a {
         text-decoration: none;
         color: $secondary-color;
@@ -35,17 +50,20 @@
         color: $secondary-color;
         background-color: $primary-variant2-color;
         padding: 1rem;
+
         &:hover {
           background-color: $primary-variant3-color;
           cursor: pointer;
         }
       }
     }
+
     form {
       width: 50%;
       display: flex;
       flex-direction: column;
       margin-left: 84px;
+
       input {
         min-height: 15%;
         background-color: transparent;
@@ -53,6 +71,7 @@
         color: white;
 
       }
+
       input:last-child {
         min-height: 7.5%;
         width: 21rem;
@@ -62,6 +81,7 @@
         background-color: $primary-variant2-color;
         padding: 1rem;
         border: none;
+
         &:hover {
           background-color: $primary-variant3-color;
           cursor: pointer;
@@ -70,4 +90,5 @@
     }
   }
 }
+
 // Mobile here

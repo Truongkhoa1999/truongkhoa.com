@@ -22,10 +22,17 @@ background-color: $primary-color;
       align-items: center;
       list-style: none;
 li{
+  font-weight: bold;
+
   &:hover{
     cursor: pointer;
     color: $secondary-color;
   }
+}
+.li-active{
+  color: $secondary-color;
+  font-weight: bold;
+
 }
       li+li {
         margin-left: 6rem;

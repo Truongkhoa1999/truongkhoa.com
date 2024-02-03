@@ -1,31 +1,29 @@
-// Fontawesome
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-// import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
 // Style
+import { useSlideDirection } from "../../utils/SlideDirectionContext";
+import { detectSwipeDirection } from "../../utils/detectSwipeDirection";
 import "./style/navbar.scss";
-import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import { handleSwitchStack } from "../../utils/handleSwitchStack";
+import { useEffect, useRef, useState } from "react";
+
 interface NavProps {
   handleSwitchElements: (element: string) => void;
 }
 export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
   const [activeElement, setActiveElement] = useState("about");
-  // const [isStackExtendsVisible, setStackExtendsVisible] = useState(false);
-  // let navigate = useNavigate();
-
-//   const handleSwitchStack = (stackTitle:string) => {
-//     navigate(`homepage/stacks/${stackTitle}`)
-// }
+  const [currentSite, setCurrentSite] = useState ("about")
+  const [destiny, setDestiny] = useState("")
+  const slideDirectionRef = useSlideDirection()
   const handleElmentClicked = (element: string) => {
     setActiveElement(element);
-    handleSwitchElements(element);
-    // handleSwitchStack("Frontend")
-    // element === "stacks"? chageStackExtendVisibility(false) :chageStackExtendVisibility(true)
-
+    handleSwitchElements(element); 
+    setCurrentSite(element)
+    if(element !== currentSite){
+      setDestiny(element)
+    }
   };
-
+useEffect (() =>{
+  slideDirectionRef.current = detectSwipeDirection(currentSite,destiny)
+}, [currentSite] )
   return (
     <div
       className="navbar__container"
@@ -38,7 +36,7 @@ export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
                   activeElement === "about" ? "li-active" : "li-inactive"
                 }
                 onClick={() => {
-                  handleElmentClicked("home");
+                  handleElmentClicked("about");
                 }}
               >
                 ABOUT

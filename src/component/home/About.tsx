@@ -1,18 +1,18 @@
 // Style
 
 
+import { useSelector } from "react-redux";
 import "./style/home.scss";
-interface AboutProps {
-  slideDirectionRef: React.MutableRefObject<string | null>;
-}
-export const About: React.FC<AboutProps> = ({ slideDirectionRef }) => {
-  const slideDirection = slideDirectionRef.current;
-  console.log(slideDirection)
+import { RootState } from "../redux/store";
+
+export const About = () => {
+  const outputSlideDirection = useSelector((state: RootState) => state.slideAnimation.outputSlideDirection);
+console.log(outputSlideDirection)
   return (
-    <div className={slideDirection === "sr" ? "home__container sr" : "home__container sl"}>
+    <div className={outputSlideDirection === 'sr' ? "home__container sr": "home__container sl" } >
       <div className="biotext__container">
         <div className="textGr">
-          <h1>KHOA SOFTWARE DEVELOPER</h1>
+          <h1>KHOA SOFTWARE DEVELOPER</h1>  
         </div>
       </div>
     </div>

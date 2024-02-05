@@ -3,15 +3,13 @@ import { useEffect, useState } from "react";
 import { projectsData } from "../../data/projectsData";
 // Style
 import "./style/projects.scss";
-import { detectSwipeDirection } from "../../utils/detectSwipeDirection";
-export const Projects = ({destiny}:{destiny: string}) => {
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+export const Projects = () => {
   const projectData = projectsData;
   const [isLoading, setIsLoading] = useState(true);
-  const [slideDirection, setSlideDirection] = useState("")
-  useEffect(() => {
-    const slideDirection = detectSwipeDirection("about", destiny)
-    setSlideDirection(slideDirection)
-  }, [destiny])
+const outputSlideDirection = useSelector((state: RootState) => state.slideAnimation.outputSlideDirection);
+
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -25,8 +23,8 @@ export const Projects = ({destiny}:{destiny: string}) => {
   
 
   return (
-    <div className="projects__container">
-      <div className= {slideDirection === "sr"? "items__wrapper sr" : "items__wrapper sl"}>
+    <div className={outputSlideDirection === 'sr'?"projects__container sr": "projects__container sl"}>
+      <div className= "items__wrapper sr" >
       {projectData.map((i, index) => (
         <a href={i.link} target="_blank" key={Math.random()}>
           <div className="project__card" key={index}>

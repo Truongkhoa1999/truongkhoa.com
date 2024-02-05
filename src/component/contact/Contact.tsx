@@ -1,16 +1,13 @@
-import { useEffect, useState } from "react";
-import { detectSwipeDirection } from "../../utils/detectSwipeDirection";
+
+import { useSelector } from "react-redux";
 import "./style/contact.scss";
+import { RootState } from "../redux/store";
 // import "../stacks/style/crtscreen.scss";
 
-export const Contact = ({destiny}:{destiny: string}) => {
-  const [slideDirection, setSlideDirection] = useState("")
-  useEffect(() => {
-    const slideDirection = detectSwipeDirection("about", destiny)
-    setSlideDirection(slideDirection)
-  }, [destiny])
+export const Contact = () => {
+  const outputSlideDirection = useSelector((state: RootState) => state.slideAnimation.outputSlideDirection);
   return (
-    <div className={slideDirection === "sr"? "contact__wrapper sr" : "contact__wrapper sl"}>
+    <div className={outputSlideDirection === 'sr'? "contact__wrapper sr" : "contact__wrapper sl"} >
       <div className="contact__container">
         <div className="generalInfo__container">
           <img

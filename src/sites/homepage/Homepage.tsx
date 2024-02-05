@@ -7,7 +7,6 @@ import { Projects } from "../../component/project/Projects";
 import { Contact } from "../../component/contact/Contact";
 import { Stacks } from "../../component/stacks/Stacks";
 import { About } from "../../component/home/About";
-import { useSlideDirection } from "../../utils/SlideDirectionContext";
 // import { Footer } from "../../component/footer/Footer";
 interface NavProps {
   about: boolean;
@@ -39,16 +38,15 @@ export const Homepage = () => {
     setElementsState(updatedObject);
 
   };
-  const slideDirectionRef = useSlideDirection();
 
   return (
     <div className="homepage__container">
       <Navbar handleSwitchElements={handleElementsAreClicked} />
       <div className="content__container">
-        {elementsState.about ? <About slideDirectionRef={slideDirectionRef}  /> : ""}
+        {elementsState.about ? <About   /> : ""}
         {elementsState.portfolio ? <Projects  /> : ""}
         {elementsState.contact ? <Contact  /> : ""}
-        {elementsState.stacks ? <Stacks slideDirectionRef={slideDirectionRef}  /> : ""}
+        {elementsState.stacks ? <Stacks   /> : ""}
       </div>
       {/* <Footer /> */}
     </div>

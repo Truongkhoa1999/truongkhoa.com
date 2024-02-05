@@ -1,13 +1,14 @@
-import {  useEffect, useRef, useState } from "react";
+import {   useRef, useState } from "react";
 import "./style/stacks.scss";
 import { ExpandedCertificate } from "../certificate/ExpandedCertificate";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 
-interface StacksProps {
-  slideDirectionRef: React.MutableRefObject<string | null>;
-}
-export const Stacks:  React.FC<StacksProps> = ({ slideDirectionRef }) => {
+
+export const Stacks = () => {
 const [isExpandedNotificationVisible, setIsExpandedNotificationVisible] = useState<boolean>(false)
+const outputSlideDirection = useSelector((state: RootState) => state.slideAnimation.outputSlideDirection);
 
   const targetElementRef = useRef<HTMLDivElement>(null);
   const handleScrollToTarget = () => {
@@ -22,11 +23,9 @@ const [isExpandedNotificationVisible, setIsExpandedNotificationVisible] = useSta
   const handleSwitchNotificationStatus = () => {
     setIsExpandedNotificationVisible(true)
   }
-  const slideDirection = slideDirectionRef.current;
-  console.log(slideDirection)
 
   return (
-    <div className={slideDirection === "sr"? "stack__container sr" : "stack__container sl"}>
+    <div className={outputSlideDirection === 'sr'?"stack__container sr" : "stack__container sl" } >
       <div className="stack__group" >
         <div onClick={handleScrollToTarget} className="stack__card">
           <img

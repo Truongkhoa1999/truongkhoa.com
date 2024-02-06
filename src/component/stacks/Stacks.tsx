@@ -28,10 +28,11 @@ const outputSlideDirection = useSelector((state: RootState) => state.slideAnimat
     <div className={outputSlideDirection === 'sr'?"stack__container sr" : "stack__container sl" } >
       <div className="stack__group" >
         <div onClick={handleScrollToTarget} className="stack__card">
-          <img
+          {/* <img
             src="https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/thumbnail%2Ffe.svg?alt=media&token=ea6cda26-9960-40bd-bba7-bd795c58ef69"
             alt="1"
-          />
+          /> */}
+          <div className="frontendSymbol">&lt;/&gt;</div>
           <h2>FRONTEND</h2>
           <p>Typescript, JavaScript, HTML SASS, ReactJS, Redux</p>
         </div>

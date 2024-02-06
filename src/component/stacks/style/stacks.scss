@@ -29,16 +29,22 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      // padding: 1rem;
       border: 1px solid $primary-variant3-color;
       border-radius: 31px;
-      img {
-        width: 79%;
-        height: 141px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 40px;
-      }
+    .frontendSymbol{
+      width: 79%;
+      height: 141px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+    }
+      // img {
+      //   width: 79%;
+      //   height: 141px;
+      //   margin-left: auto;
+      //   margin-right: auto;
+      //   margin-top: 40px;
+      // }
       h2{
         font-weight: bold;
         font-size: 1.875rem;
@@ -55,19 +61,24 @@
         margin-right: auto;
       }
       &:hover{
-        background-color: $primary-color;
+        transform: translateY(180deg);
         cursor: pointer;
-        img{
-          filter: drop-shadow(5px 2.5px 2px $secondary-color);
-          scale: 1.14;
-          transition: .5s;
-        }
+        transform-style: preserve-3d;
+
       }
+      // &:hover{
+      //   background-color: $primary-color;
+      //   cursor: pointer;
+      //   img{
+      //     filter: drop-shadow(5px 2.5px 2px $secondary-color);
+      //     scale: 1.14;
+      //     transition: .5s;
+      //   }
+      // }
     }
 
   }
   .certificate__container {
-    // border: 1px solid yellow;
     width: 100%;
     height: 8%;
     background-color: $primary-variant3-color;

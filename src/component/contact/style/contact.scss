@@ -39,11 +39,9 @@
         margin-bottom: 55px;
       }
 
-      a+a {
-        margin-left: 20px;
-      }
 
-      a {
+
+      .bioLink {
         text-decoration: none;
         color: $secondary-color;
         font-weight: bold;
@@ -92,3 +90,63 @@
 }
 
 // Mobile here
+@media (max-width:500px) {
+  .contact__container {
+   
+    .generalInfo__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+
+      img {
+        margin-bottom: 55px;
+        width: 40%;
+        align-self: center;
+      }
+
+      p {
+        font-weight: bold;
+        font-size: 1rem !important;
+        width: 22rem;
+        margin-bottom: 55px;
+      }
+
+      .bioLink {
+        text-decoration: none;
+        color: $secondary-color;
+        font-weight: bold;
+        color: $secondary-color;
+        background-color: $primary-variant2-color;
+        padding: 1rem;
+        width: 90%;
+        align-self: center;
+
+        &:hover {
+          background-color: $primary-variant3-color;
+          cursor: pointer;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 0 !important;
+      width: 80% !important;
+      align-items: center;
+
+      input {
+        width: 90% !important;
+        min-height: 19% !important;
+
+        color: white;
+
+      }
+
+      input:last-child {
+        margin-top: 20px !important;
+      }
+    }
+  }
+}

@@ -9,7 +9,6 @@ export const detectSwipeDirection = (elementFrom: string, elementTo: string): st
    console.log("to index ", toIndex)
     for (let i=0; i < elementsArray.length; i++){
         if( elementsArray[i] === elementFrom){
-
             if(fromIndex > toIndex){
                 const direction = "sl"
                 console.log(direction)

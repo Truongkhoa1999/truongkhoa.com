@@ -2,12 +2,14 @@
 @import "../../../utils//style/slideinanimation.scss";
 
 // general
-.sr{
+.sr {
   animation: slideR 1s ease-in-out;
 }
-.sl{
+
+.sl {
   animation: slideL 1s ease-in-out;
 }
+
 .stack__container {
   width: 100%;
   height: 100vh;
@@ -24,6 +26,7 @@
     margin-top: 106px;
     margin-left: auto;
     margin-right: auto;
+
     .stack__card {
       width: 30%;
       height: 100%;
@@ -31,28 +34,24 @@
       flex-direction: column;
       border: 1px solid $primary-variant3-color;
       border-radius: 31px;
-    .frontendSymbol{
-      width: 79%;
-      height: 141px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 40px;
-    }
-      // img {
-      //   width: 79%;
-      //   height: 141px;
-      //   margin-left: auto;
-      //   margin-right: auto;
-      //   margin-top: 40px;
-      // }
-      h2{
+
+      img {
+        width: 79%;
+        height: 141px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+      }
+
+      h2 {
         font-weight: bold;
         font-size: 1.875rem;
         color: $secondary-color;
         text-align: center;
         margin-top: 64px;
       }
-      p{
+
+      p {
         text-align: center;
         font-size: .938rem;
         margin-top: 25px;
@@ -60,12 +59,14 @@
         margin-left: auto;
         margin-right: auto;
       }
-      &:hover{
+
+      &:hover {
         transform: translateY(180deg);
         cursor: pointer;
         transform-style: preserve-3d;
 
       }
+
       // &:hover{
       //   background-color: $primary-color;
       //   cursor: pointer;
@@ -78,6 +79,7 @@
     }
 
   }
+
   .certificate__container {
     width: 100%;
     height: 8%;
@@ -87,40 +89,94 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    p{
+
+    p {
       // width: 479px;
       font-weight: bold;
       font-size: 1.3rem;
-  }
-  button{
-    background-color: $primary-variant2-color;
-    color: $secondary-color;
-    border-radius: 5px;
-    padding: 10px;
-    margin-left: 8px;
-    border: none;
-    &:hover{
-      background-color: $primary-color;
-      cursor: pointer;
+    }
+
+    button {
+      background-color: $primary-variant2-color;
+      color: $secondary-color;
+      border-radius: 5px;
+      padding: 10px;
+      margin-left: 8px;
+      border: none;
+
+      &:hover {
+        background-color: $primary-color;
+        cursor: pointer;
+      }
     }
   }
-}
 }
 
 @media (max-width: 500px) {
   .stack__container {
     .stack__group {
+      height: auto;
       flex-direction: column;
-      // .stack__card{
-      // }
+      margin: 0;
+      justify-content: flex-start;
+
+      .stack__card {
+        width: 38%;
+        height: 25%;
+        margin-top: 20px;
+        align-self: center;
+        padding-bottom: 1rem;
+
+        img {
+          width: 45%;
+          align-self: center;
+        }
+
+        p {
+          width: 90%;
+          align-self: center;
+
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        img,
+        h2,
+        p {
+          margin: 0;
+        }
+
+      }
     }
+
     .certificate__container {
-      border: 1px solid yellow;
       width: 100%;
-      height: 8%;
+      height: 5%;
+
+      p {
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      button {
+
+        border-radius: 5px;
+        padding: 7px;
+        margin-left: 8px;
+        border: none;
+        font-size: .75rem;
+
+        &:hover {
+          background-color: $primary-color;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
+
 
 //   .checkerboard {
 //     width: 5vw;

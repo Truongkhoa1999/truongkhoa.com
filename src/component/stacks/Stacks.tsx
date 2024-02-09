@@ -26,18 +26,16 @@ const outputSlideDirection = useSelector((state: RootState) => state.slideAnimat
 
   return (
     <div className={outputSlideDirection === 'sr'?"stack__container sr" : "stack__container sl" } >
-      <div className="stack__group" >
+      <div className="stack__group">
         <div onClick={handleScrollToTarget} className="stack__card">
-          {/* <img
+          <img
             src="https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/thumbnail%2Ffe.svg?alt=media&token=ea6cda26-9960-40bd-bba7-bd795c58ef69"
             alt="1"
-          /> */}
-          <div className="frontendSymbol">&lt;/&gt;</div>
+          />
           <h2>FRONTEND</h2>
           <p>Typescript, JavaScript, HTML SASS, ReactJS, Redux</p>
         </div>
         <div onClick={handleScrollToTarget} className="stack__card">
-          {" "}
           <img
             src="https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/thumbnail%2Fbe.svg?alt=media&token=e7d4411e-55f0-473b-99e6-6ef79bd21df4"
             alt="1"
@@ -46,7 +44,6 @@ const outputSlideDirection = useSelector((state: RootState) => state.slideAnimat
           <p>Java, C#, C++, PostgreSQL, MongoDB SpringBoot, ExpressJS </p>
         </div>
         <div onClick={handleScrollToTarget} className="stack__card">
-          {" "}
           <img
             src="https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/thumbnail%2Fside.svg?alt=media&token=2e067cdf-a4de-4849-ae56-c8df357e924e"
             alt="1"

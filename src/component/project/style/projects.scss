@@ -2,12 +2,14 @@
 @import "../../../utils//style/slideinanimation.scss";
 
 // generall
-.sr{
+.sr {
   animation: slideR 1s ease-in-out;
 }
-.sl{
+
+.sl {
   animation: slideL 1s ease-in-out;
 }
+
 .projects__container {
   width: 100%;
   display: flex;
@@ -20,9 +22,10 @@
     margin-left: auto;
     margin-right: auto;
     padding: 2rem 0 4rem 0;
+
     a {
-    text-decoration: none;
-    color: red!important;
+      text-decoration: none;
+      color: red !important;
 
       .project__card {
         width: 50%;
@@ -34,36 +37,41 @@
         padding: 1rem;
         background-color: $primary-color;
         margin-top: 1rem;
-        // test loading image
-    .item--loading{
-      width: 30%;
 
-      background: #eee;
-      background: linear-gradient(90deg, $primary-color, $secondary-color, #005314);
+        .item--loading {
+          width: 30%;
 
-      background-size: 200% 100%;
-      animation: 1.5s loading linear infinite;
-      height: 90px;
-    
-    }
-    @keyframes loading {
-      to {
-        background-position-x: -200%;
-      }
-    }
-    .imageLoading{
-      display: none;
-    }
-    .loadedImage {
-      width: 30%;
-      overflow: hidden;
-      filter: grayscale(100%);
-      padding: 2px;
+          background: #eee;
+          background: linear-gradient(90deg, $primary-color, $secondary-color, #005314);
 
-    }
-// test ended
+          background-size: 200% 100%;
+          animation: 1.5s loading linear infinite;
+          height: 90px;
+
+        }
+
+        @keyframes loading {
+          to {
+            background-position-x: -200%;
+          }
+        }
+
+        .imageLoading {
+          display: none;
+        }
+
+        .loadedImage {
+          width: 30%;
+          overflow: hidden;
+          filter: grayscale(100%);
+          padding: 2px;
+
+        }
+
+        // test ended
         &:hover {
           background-color: $primary-variant3-color;
+
           .loadedImage {
             cursor: pointer;
             transition: .5s;
@@ -71,17 +79,21 @@
             overflow: hidden;
           }
 
-            
+
         }
+
         .projectInfo {
           color: white;
+
           h2 {
             color: $secondary-color;
           }
+
           h5 {
             margin-top: 5px;
           }
         }
+
         img {
           width: 20rem;
           // height: 10px;
@@ -89,4 +101,19 @@
       }
     }
   }
+}
+
+@media (max-width:500px) {
+  .items__wrapper {
+    width: 100%!important;
+
+    .project__card {
+    width: 65%!important;
+    .loadedImage {
+      width: 25%!important;
+      height: 60px;
+    }
+    }
+  }
+
 }

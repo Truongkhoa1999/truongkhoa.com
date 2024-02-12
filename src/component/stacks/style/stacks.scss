@@ -34,7 +34,7 @@
       flex-direction: column;
       border: 1px solid $primary-variant3-color;
       border-radius: 31px;
-
+background-color: $primary-color;
       img {
         width: 79%;
         height: 141px;
@@ -49,27 +49,43 @@
         color: $secondary-color;
         text-align: center;
         margin-top: 64px;
+        // word-spacing: 2rem!important;
+        // border: 1px solid red;
+      }
+      h3{
+        font-weight: bold;
+        color: $secondary-color;
+        text-align: center;
+        margin-top: 10px;
+
       }
 
-      p {
-        text-align: center;
-        font-size: .938rem;
+      ul {
         margin-top: 25px;
         width: 45%;
         margin-left: auto;
         margin-right: auto;
+      li{
+        margin-top: 10px;
+        text-align: left;
+        font-size: 1rem;
+
+      }
       }
 
       &:hover {
-        transform: translateY(180deg);
+        // transform: translateY(180deg);
         cursor: pointer;
-        transform-style: preserve-3d;
-
+        // transform-style: preserve-3d;
       }
 
        &:hover{
-         background-color: $primary-color;
+        background-color: $secondary-color;
          cursor: pointer;
+         h2,h3{
+          color: white;
+
+         }
          img{
            filter: drop-shadow(5px 2.5px 2px $secondary-color);
            scale: 1.14;

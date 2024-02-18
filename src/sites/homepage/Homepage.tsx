@@ -7,6 +7,7 @@ import { Projects } from "../../component/project/Projects";
 import { Contact } from "../../component/contact/Contact";
 import { Stacks } from "../../component/stacks/Stacks";
 import { About } from "../../component/home/About";
+import { Chatbox } from "../../component/chatbox/Chatbox";
 // import { Footer } from "../../component/footer/Footer";
 interface NavProps {
   about: boolean;
@@ -48,6 +49,7 @@ export const Homepage = () => {
         {elementsState.contact ? <Contact  /> : ""}
         {elementsState.stacks ? <Stacks   /> : ""}
       </div>
+      <Chatbox />
       {/* <Footer /> */}
     </div>
   );

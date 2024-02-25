@@ -1,0 +1,23 @@
+// Define Google colors
+$google-blue: #4285F4;
+$google-red: #DB4437;
+$google-yellow: #F4B400;
+$google-green: #0F9D58;
+
+// Define Google button styles
+@mixin google-button {
+  background-color: $google-blue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($google-blue, 10%);
+  }
+}
+
+

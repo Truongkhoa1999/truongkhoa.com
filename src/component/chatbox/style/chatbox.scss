@@ -1,0 +1,55 @@
+@import "../../../colors/colorpreset.scss";
+@import "../../../utils/style/toogleButton.scss";
+.chatbox__container {
+  width: 100%;
+  background-color: black;
+  color: $primary-variant3-color;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  .toogleChat__button{
+    padding: 1rem;
+    background-color: $primary-variant1-color;
+    border: none;
+    font-weight: bold;
+    color: white;
+    &:hover{
+      cursor: pointer;
+
+    }
+  }
+  .corecenter {
+    .conversation__container {
+      padding: 2rem;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      input {
+        width: 90%;
+        // padding: 1rem;
+        background-color: transparent;
+        color: $primary-variant1-color;
+        border-top: none;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid white;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      button{
+        background-color: transparent;
+        color: $primary-variant1-color;
+        border: none;
+        padding: 1rem;
+        &:hover{
+          border: 1px solid white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

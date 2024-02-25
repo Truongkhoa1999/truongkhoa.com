@@ -19,7 +19,8 @@ export const Chatbox = () => {
     (state: RootState) => state.chatMessage.messages
   );
   useEffect(() => {
-    if (isChatboxMounted && isWarnning) {
+    console.log("chat box is mounted?:", isChatboxMounted)
+    if (isChatboxMounted) {
       ws.current = new WebSocket(wsUrl);
       ws.current.onopen = () => {
         console.log("client is connected");
@@ -45,7 +46,7 @@ export const Chatbox = () => {
         ws.current.close();
       }
     };
-  }, [isChatboxMounted, dispatch, isWarnning]);
+  }, [isChatboxMounted, dispatch]);
   useEffect(() => {
     console.log("Redux state messages:", messages);
   }, [messages]);
@@ -73,7 +74,11 @@ export const Chatbox = () => {
   ) => {
     event.preventDefault();
     setIsWarning(true);
-    console.log(isWarnning);
+    if(isWarnning){
+      setIsChatboxMounted(false)
+    } else{
+      setIsChatboxMounted(true)
+    }
   };
 
   const handleSubmitMessage = (event: React.FormEvent<HTMLFormElement>) => {

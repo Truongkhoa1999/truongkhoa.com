@@ -10,16 +10,17 @@ export const Chatbox = () => {
   const [messageInput, setMessageInput] = useState("");
   const [userName, setUsername] = useState("anonymous");
   const [isWarnning, setIsWarning] = useState(false);
-
+  const userNameRegex = /\/.*\\/;
   const targetElementRef = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
   const ws = useRef<WebSocket | null>(null);
-  const wsUrl = `wss://6gn1dqvffe.execute-api.us-east-1.amazonaws.com/demo/?userName=${userName}`;
+  // const wsUrl = `wss://6gn1dqvffe.execute-api.us-east-1.amazonaws.com/demo/?userName=${userName}`;
+  const wsUrl = "wss://6gn1dqvffe.execute-api.us-east-1.amazonaws.com/demo/";
   const messages = useSelector(
     (state: RootState) => state.chatMessage.messages
   );
   useEffect(() => {
-    console.log("chat box is mounted?:", isChatboxMounted)
+    console.log("chat box is mounted?:", isChatboxMounted);
     if (isChatboxMounted) {
       ws.current = new WebSocket(wsUrl);
       ws.current.onopen = () => {
@@ -31,9 +32,9 @@ export const Chatbox = () => {
 
         try {
           const messageData = event.data;
-          console.log("Parsed message data:", messageData);
+          const senderName = event.data.match(userNameRegex)[0]
           dispatch(
-            addMessage({ id: "1", sender: userName, content: messageData })
+            addMessage({ id: "1", sender: senderName, content: messageData })
           );
         } catch (error) {
           console.error("Error parsing WebSocket message:", error);
@@ -74,10 +75,10 @@ export const Chatbox = () => {
   ) => {
     event.preventDefault();
     setIsWarning(true);
-    if(isWarnning){
-      setIsChatboxMounted(false)
-    } else{
-      setIsChatboxMounted(true)
+    if (isWarnning) {
+      setIsChatboxMounted(false);
+    } else {
+      setIsChatboxMounted(true);
     }
   };
 
@@ -86,7 +87,7 @@ export const Chatbox = () => {
     if (messageInput.trim() !== "") {
       const message = {
         action: "sendMessage",
-        message: messageInput,
+        message: messageInput + "/" + userName + "\\",
       };
       ws.current?.send(JSON.stringify(message));
       setMessageInput("");
@@ -106,7 +107,7 @@ export const Chatbox = () => {
           placeholder="Your name..."
         />
         <button
-          onClick={()=>handleToogleIdentification}
+          onClick={() => handleToogleIdentification}
           className="userName_button"
         >
           Connect

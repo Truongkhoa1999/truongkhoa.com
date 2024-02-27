@@ -1,12 +1,16 @@
 @import "../../../colors/colorpreset.scss";
 @import "../../../utils/style/toogleButton.scss";
 .chatbox__container {
-  width: 100%;
+  width: 30%;
   background-color: black;
   color: $primary-variant3-color;
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
   .toogleChat__button{
     padding: 1rem;
     background-color: $primary-variant1-color;
@@ -16,6 +20,18 @@
     &:hover{
       cursor: pointer;
 
+    }
+  }
+  .identificationForm{
+    // border: 1px solid red;
+    display: flex;
+    justify-content: right;
+    input,button{
+      padding: 5px;
+      width: 20%;
+    }
+    input{
+      margin-right: 5px;
     }
   }
   .corecenter {

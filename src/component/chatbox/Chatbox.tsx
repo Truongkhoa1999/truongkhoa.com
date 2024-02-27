@@ -43,8 +43,9 @@
         //   reworking ended
       }
       return () => {
-        if (ws.current) {
+        if (ws.current ) {
           ws.current.close();
+        
         }
       };
     }, [isChatboxMounted, dispatch,isWarnning]);
@@ -95,6 +96,7 @@
       <div className="chatbox__container">
         <button className="toogleChat__button" onClick={handleToogleChatBox}>
           Live chat
+          
         </button>
         <form className="identificationForm" onSubmit={handleToogleIdentification}>
           <input

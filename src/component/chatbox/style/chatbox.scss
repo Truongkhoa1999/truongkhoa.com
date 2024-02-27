@@ -10,7 +10,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
-
+padding: 5px;
   .toogleChat__button{
     padding: 1rem;
     background-color: $primary-variant1-color;
@@ -26,7 +26,12 @@
     // border: 1px solid red;
     display: flex;
     justify-content: right;
-    input,button{
+    input{
+      width: 100%;
+      padding: 5px;
+
+    }
+    button{
       padding: 5px;
       width: 20%;
     }
@@ -67,5 +72,11 @@
         }
       }
     }
+  }
+}
+// mobile screen
+@media (max-width:500px){
+  .chatbox__container{
+    width: 100%;
   }
 }

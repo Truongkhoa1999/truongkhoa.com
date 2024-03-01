@@ -2,8 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./style/chatbox.scss";
 import { RootState } from "../redux/store";
 import { useEffect, useRef, useState } from "react";
-import { addMessageForUserA } from "../redux/Reducer/chatMessageSliceForUserA";
-import { addMessageForUserB } from "../redux/Reducer/chatMessageSliceForUserB";
+import { addMessage } from "../redux/Reducer/chatMessageSlice";
 
 export const Chatbox = () => {
   const [isChatboxMounted, setIsChatboxMounted] = useState(false);
@@ -16,11 +15,8 @@ export const Chatbox = () => {
   const dispatch = useDispatch();
   const ws = useRef<WebSocket | null>(null);
   const wsUrl = "wss://6gn1dqvffe.execute-api.us-east-1.amazonaws.com/demo/";
-  const messagesUserA = useSelector(
-    (state: RootState) => state.chatMessageUserA.messages
-  );
-  const messagesUserB = useSelector(
-    (state: RootState) => state.chatMessageUserB.messages
+  const messages = useSelector(
+    (state: RootState) => state.chatMessage.messages
   );
   useEffect(() => {
     console.log("chat box is mounted?:", isChatboxMounted);
@@ -33,12 +29,21 @@ export const Chatbox = () => {
         console.log("Received WebSocket message:", event.data);
         try {
           const messageData = event.data;
-          const senderName = event.data.match(userNameRegexinTheMessage)[0];
-          if(senderName !== userName){
-            dispatch(addMessageForUserB({id:"1",sender:senderName,content:messageData}))
+          let senderName
+          if (messageData && messageData.trim() !== "") {
+            console.log(messageData)
+            senderName = event.data.match(userNameRegexinTheMessage)[0];
+            console.log("testign running into true condition")
+          } else {
+            senderName = "anonymus"
+            console.log("testign running into falsy condition")
+
+          }
+          if (senderName !== userName) {
+            dispatch(addMessage({ id: "1", sender: senderName, content: messageData }))
           }
         } catch (error) {
-          console.error("Error parsing WebSocket message:", error);
+          console.error( error);
         }
       };
     }
@@ -47,7 +52,7 @@ export const Chatbox = () => {
         ws.current.close();
       }
     };
-  }, [isChatboxMounted, dispatch,messagesUserA,messagesUserB]);
+  }, [isChatboxMounted, dispatch]);
 
   const handleScrollToTarget = () => {
     if (targetElementRef.current) {
@@ -80,7 +85,7 @@ export const Chatbox = () => {
     event.preventDefault();
     if (messageInput.trim() !== "") {
       const messageData = messageInput + "/" + userName + "\\";
-      dispatch(addMessageForUserA({ id: "1", sender: userName, content: messageData }));
+      console.log("this is userA messages:", messageData)
       const message = {
         action: "sendMessage",
         message: messageData,
@@ -125,19 +130,8 @@ export const Chatbox = () => {
 
       {isChatboxMounted && isWarnning ? (
         <div ref={targetElementRef} className="corecenter">
-          <div className="conversationUserA__container">
-            {messagesUserA.map((msg, index) => (
-              <div key={index}>
-                <p>
-                  {msg.sender.replace(userNameRegexName, "")}:{" "}
-                  {msg.content.replace(userNameRegexinTheMessage, "")}
-                </p>
-              </div>
-            ))}
-          </div>
-          <p>this is senderB</p>
-          <div className="conversationUserB__container">
-            {messagesUserB.map((msg, index) => (
+          <div className="conversation__container">
+            {messages.map((msg, index) => (
               <div key={index}>
                 <p>
                   {msg.sender.replace(userNameRegexName, "")}:{" "}

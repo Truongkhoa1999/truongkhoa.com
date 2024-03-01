@@ -10,15 +10,15 @@ interface ChatState {
 const initialState: ChatState = {
   messages: [],
 };
- const chatMessageSliceForUserA = createSlice({
+ const chatMessageSlice = createSlice({
   name: "chatMessage",
   initialState,
   reducers: {
-    addMessageForUserA: (state, action: PayloadAction<messageProps>) => {
+    addMessage: (state, action: PayloadAction<messageProps>) => {
       state.messages.push(action.payload);
     },
   },
 });
-export const {addMessageForUserA} = chatMessageSliceForUserA.actions
-export default chatMessageSliceForUserA.reducer
+export const {addMessage} = chatMessageSlice.actions
+export default chatMessageSlice.reducer
 

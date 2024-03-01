@@ -1,14 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit"
 import  slideAnimationReducer, { slideAnimationProps }  from "./Reducer/slideAnimationSlice"
-import chatMessageSlice from "./Reducer/chatMessageSlice";
+import chatMessageSliceForUserA from "./Reducer/chatMessageSliceForUserA";
+import chatMessageSliceForUserB from "./Reducer/chatMessageSliceForUserB";
 export const store = configureStore({
     reducer:{
         slideAnimation: slideAnimationReducer,
-        chatMessage: chatMessageSlice 
+        chatMessageUserA: chatMessageSliceForUserA,
+        chatMessageUserB: chatMessageSliceForUserB 
     },
 })
 export type RootState = {
     slideAnimation: slideAnimationProps; 
-    chatMessage: ReturnType<typeof chatMessageSlice>
+    chatMessageUserA: ReturnType<typeof chatMessageSliceForUserA>
+    chatMessageUserB: ReturnType<typeof chatMessageSliceForUserB>
+
   };
  

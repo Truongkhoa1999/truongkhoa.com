@@ -3,6 +3,7 @@ export interface messageProps {
   id: string;
   sender: string;
   content: string;
+  timeStamp: string
 }
 interface ChatState {
   messages: messageProps[];
@@ -17,8 +18,11 @@ const initialState: ChatState = {
     addMessage: (state, action: PayloadAction<messageProps>) => {
       state.messages.push(action.payload);
     },
+    resetMessage: (state)=>{
+      state.messages = []
+    }
   },
 });
-export const {addMessage} = chatMessageSlice.actions
+export const {addMessage, resetMessage} = chatMessageSlice.actions
 export default chatMessageSlice.reducer
 

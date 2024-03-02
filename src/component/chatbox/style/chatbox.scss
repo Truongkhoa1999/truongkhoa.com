@@ -41,8 +41,17 @@ padding: 5px;
   }
   .corecenter {
     .conversation__container{
-      padding: 2rem;
-      border: 1px solid red;
+      padding: 1rem 0 1rem 0;
+      overflow-y: scroll;
+      max-height: 10rem;
+      .conversation_userA{
+        color: rgb(157, 255, 0);
+        text-align: right;
+      }
+      color: rgb(255, 123, 0);
+      .message_line{
+        margin-top: 10px;
+      }
     }
    
     // }

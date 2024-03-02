@@ -3,6 +3,7 @@ import { Homepage } from "./sites/homepage/Homepage";
 // style
 import "./App.css";
 import './style.scss'
+import './utils/style/scrollbar.scss'
 import { SlideDirectionContext } from "./utils/SlideDirectionContext";
 import { useRef } from "react";
 

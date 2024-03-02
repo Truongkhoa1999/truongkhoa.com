@@ -14,3 +14,9 @@ body{
   flex-direction: column;
   height: 100%;
 }
+body::-webkit-scrollbar-track {
+  background: #f70000; /* Color of the scrollbar track */
+}
+body::-webkit-scrollbar-track {
+  background: #f70000; /* Color of the scrollbar track */
+}

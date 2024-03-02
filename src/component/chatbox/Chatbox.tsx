@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./style/chatbox.scss";
 import { RootState } from "../redux/store";
 import { useEffect, useRef, useState } from "react";
-import { addMessage } from "../redux/Reducer/chatMessageSlice";
+import { addMessage, resetMessage } from "../redux/Reducer/chatMessageSlice";
 
 export const Chatbox = () => {
   const [isChatboxMounted, setIsChatboxMounted] = useState(false);
@@ -40,7 +40,10 @@ export const Chatbox = () => {
 
           }
           if (senderName !== userName) {
-            dispatch(addMessage({ id: "1", sender: senderName, content: messageData }))
+            const date = new Date();
+            const options = { timeZone: 'Europe/Helsinki', hour12: false }; // Set the timezone to Finland (Europe/Helsinki)
+            const finalTimeStamp = date.toLocaleTimeString('en-US', options);
+            dispatch(addMessage({ id: "1", sender: senderName, content: messageData, timeStamp: finalTimeStamp} ))
           }
         } catch (error) {
           console.error( error);
@@ -53,6 +56,13 @@ export const Chatbox = () => {
       }
     };
   }, [isChatboxMounted, dispatch]);
+
+  const handleDisconnect = () =>{
+    if(ws.current){
+      ws.current.close();
+    }
+    dispatch(resetMessage())
+  }
 
   const handleScrollToTarget = () => {
     if (targetElementRef.current) {
@@ -79,6 +89,7 @@ export const Chatbox = () => {
     event.preventDefault();
     setIsWarning(!isWarnning);
     setIsChatboxMounted(!isWarnning);
+    // disconnect order 
   };
 
   const handleSubmitMessage = (event: React.FormEvent<HTMLFormElement>) => {
@@ -98,7 +109,7 @@ export const Chatbox = () => {
   return (
     <div className="chatbox__container">
       <button className="toogleChat__button" onClick={handleToogleChatBox}>
-        Live chat
+        Live chat ({messages.length})
       </button>
       <form
         className="identificationForm"
@@ -122,6 +133,7 @@ export const Chatbox = () => {
           disabled={isWarnning ? false : true}
           onClick={() => {
             handleToogleIdentification;
+            handleDisconnect()
           }}
         >
           Disconnect
@@ -132,8 +144,9 @@ export const Chatbox = () => {
         <div ref={targetElementRef} className="corecenter">
           <div className="conversation__container">
             {messages.map((msg, index) => (
-              <div key={index}>
-                <p>
+              <div className="message_line" key={index}>
+                <p className={msg.sender.replace(userNameRegexName, "") === userName?"conversation_userA":"" }>{msg.timeStamp}</p>
+                <p className={msg.sender.replace(userNameRegexName, "") === userName?"conversation_userA":"" }>
                   {msg.sender.replace(userNameRegexName, "")}:{" "}
                   {msg.content.replace(userNameRegexinTheMessage, "")}
                 </p>

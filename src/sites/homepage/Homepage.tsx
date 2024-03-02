@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Navbar } from "../../component/navbar/Navbar";
-
 // style
 import "./style/homepage.scss";
+import "../../utils/style/scrollbar.scss"
+
 import { Projects } from "../../component/project/Projects";
 import { Contact } from "../../component/contact/Contact";
 import { Stacks } from "../../component/stacks/Stacks";

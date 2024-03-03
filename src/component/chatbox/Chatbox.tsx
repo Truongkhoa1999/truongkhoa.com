@@ -124,12 +124,13 @@ export const Chatbox = () => {
         />
         <button
           onClick={() => handleToogleIdentification}
-          className="userName_button"
+          className={isWarnning? "accessButton disabled":"accessButton"}
           disabled={isWarnning ? true : false}
         >
           Connect
         </button>
         <button
+        className={isWarnning? "accessButton": "accessButton disabled"}
           disabled={isWarnning ? false : true}
           onClick={() => {
             handleToogleIdentification;
@@ -147,7 +148,7 @@ export const Chatbox = () => {
               <div className="message_line" key={index}>
                 <p className={msg.sender.replace(userNameRegexName, "") === userName?"conversation_userA":"" }>{msg.timeStamp}</p>
                 <p className={msg.sender.replace(userNameRegexName, "") === userName?"conversation_userA":"" }>
-                  {msg.sender.replace(userNameRegexName, "")}:{" "}
+π                  {msg.sender.replace(userNameRegexName, "")}:{" "}
                   {msg.content.replace(userNameRegexinTheMessage, "")}
                 </p>
               </div>

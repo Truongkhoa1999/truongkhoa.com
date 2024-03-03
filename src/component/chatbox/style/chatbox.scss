@@ -19,17 +19,35 @@ padding: 5px;
     color: white;
     &:hover{
       cursor: pointer;
-
     }
   }
   .identificationForm{
-    // border: 1px solid red;
     display: flex;
-    justify-content: right;
+
+
+    .accessButton{
+      background-color: transparent;
+      color: white;
+      padding: .5rem;
+      margin-right: .1rem;
+      width: 100%;
+      border: none;
+      &:hover{
+        background-color: $secondary-color;
+        cursor: pointer;
+      }
+    }
+    .disabled{
+      background-color: rgb(42, 42, 42);
+      color: black;
+      &:hover{
+        background-color: rgb(42, 42, 42);
+        cursor: not-allowed;
+      }
+    }
     input{
       width: 100%;
       padding: 5px;
-
     }
     button{
       padding: 5px;
@@ -89,6 +107,6 @@ padding: 5px;
 // mobile screen
 @media (max-width:500px){
   .chatbox__container{
-    width: 100%;
+    width: 99%;
   }
 }

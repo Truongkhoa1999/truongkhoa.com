@@ -19,34 +19,34 @@ export const Chatbox = () => {
     (state: RootState) => state.chatMessage.messages
   );
   useEffect(() => {
-    console.log("chat box is mounted?:", isChatboxMounted);
     if (isChatboxMounted) {
       ws.current = new WebSocket(wsUrl);
-      ws.current.onopen = () => {
-        console.log("client is connected");
-      };
+      ws.current.onopen = () => {};
       ws.current.onmessage = (event) => {
-        console.log("Received WebSocket message:", event.data);
         try {
           const messageData = event.data;
-          let senderName
+          let senderName;
           if (messageData && messageData.trim() !== "") {
-            console.log(messageData)
+            console.log(messageData);
             senderName = event.data.match(userNameRegexinTheMessage)[0];
-            console.log("testign running into true condition")
           } else {
-            senderName = "anonymus"
-            console.log("testign running into falsy condition")
-
+            senderName = "anonymus";
           }
           if (senderName !== userName) {
             const date = new Date();
-            const options = { timeZone: 'Europe/Helsinki', hour12: false }; // Set the timezone to Finland (Europe/Helsinki)
-            const finalTimeStamp = date.toLocaleTimeString('en-US', options);
-            dispatch(addMessage({ id: "1", sender: senderName, content: messageData, timeStamp: finalTimeStamp} ))
+            const options = { timeZone: "Europe/Helsinki", hour12: false };
+            const finalTimeStamp = date.toLocaleTimeString("en-US", options);
+            dispatch(
+              addMessage({
+                id: "1",
+                sender: senderName,
+                content: messageData,
+                timeStamp: finalTimeStamp,
+              })
+            );
           }
         } catch (error) {
-          console.error( error);
+          console.error(error);
         }
       };
     }
@@ -57,12 +57,12 @@ export const Chatbox = () => {
     };
   }, [isChatboxMounted, dispatch]);
 
-  const handleDisconnect = () =>{
-    if(ws.current){
+  const handleDisconnect = () => {
+    if (ws.current) {
       ws.current.close();
     }
-    dispatch(resetMessage())
-  }
+    dispatch(resetMessage());
+  };
 
   const handleScrollToTarget = () => {
     if (targetElementRef.current) {
@@ -89,14 +89,12 @@ export const Chatbox = () => {
     event.preventDefault();
     setIsWarning(!isWarnning);
     setIsChatboxMounted(!isWarnning);
-    // disconnect order 
   };
 
   const handleSubmitMessage = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (messageInput.trim() !== "") {
       const messageData = messageInput + "/" + userName + "\\";
-      console.log("this is userA messages:", messageData)
       const message = {
         action: "sendMessage",
         message: messageData,
@@ -107,48 +105,65 @@ export const Chatbox = () => {
   };
 
   return (
-    <div className="chatbox__container">
+    <div className={isChatboxMounted?"chatbox__container  chatbox__container-mounted": "chatbox__container"}>
       <button className="toogleChat__button" onClick={handleToogleChatBox}>
         Live chat ({messages.length})
       </button>
-      <form
-        className="identificationForm"
-        onSubmit={handleToogleIdentification}
-      >
-        <input
-          type="text"
-          value={userName}
-          onChange={handleNameChange}
-          placeholder="Your name..."
-          disabled={isWarnning ? true : false}
-        />
-        <button
-          onClick={() => handleToogleIdentification}
-          className={isWarnning? "accessButton disabled":"accessButton"}
-          disabled={isWarnning ? true : false}
+      {isChatboxMounted ? (
+        <form
+          className="identificationForm"
+          onSubmit={handleToogleIdentification}
         >
-          Connect
-        </button>
-        <button
-        className={isWarnning? "accessButton": "accessButton disabled"}
-          disabled={isWarnning ? false : true}
-          onClick={() => {
-            handleToogleIdentification;
-            handleDisconnect()
-          }}
-        >
-          Disconnect
-        </button>
-      </form>
-
+          <input
+            type="text"
+            value={userName}
+            onChange={handleNameChange}
+            placeholder="Your name..."
+            disabled={isWarnning ? true : false}
+          />
+          <button
+            onClick={() => handleToogleIdentification}
+            className={isWarnning ? "accessButton disabled" : "accessButton"}
+            disabled={isWarnning ? true : false}
+          >
+            Connect
+          </button>
+          <button
+            className={isWarnning ? "accessButton" : "accessButton disabled"}
+            disabled={isWarnning ? false : true}
+            onClick={() => {
+              handleToogleIdentification;
+              handleDisconnect();
+            }}
+          >
+            Disconnect
+          </button>
+        </form>
+      ) : (
+        ""
+      )}
       {isChatboxMounted && isWarnning ? (
         <div ref={targetElementRef} className="corecenter">
           <div className="conversation__container">
             {messages.map((msg, index) => (
               <div className="message_line" key={index}>
-                <p className={msg.sender.replace(userNameRegexName, "") === userName?"conversation_userA":"" }>{msg.timeStamp}</p>
-                <p className={msg.sender.replace(userNameRegexName, "") === userName?"conversation_userA":"" }>
-π                  {msg.sender.replace(userNameRegexName, "")}:{" "}
+                <p
+                  className={
+                    msg.sender.replace(userNameRegexName, "") === userName
+                      ? "conversation_userA"
+                      : ""
+                  }
+                >
+                  {msg.timeStamp}
+                </p>
+                <p
+                  className={
+                    msg.sender.replace(userNameRegexName, "") === userName
+                      ? "conversation_userA"
+                      : ""
+                  }
+                >
+                  π {msg.sender.replace(userNameRegexName, "")}:{" "}
                   {msg.content.replace(userNameRegexinTheMessage, "")}
                 </p>
               </div>

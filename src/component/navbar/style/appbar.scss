@@ -1,0 +1,34 @@
+// General
+.appBar_container {
+    width:100vw;
+    border-width: 10px solid red;
+    background-color: #fcfcfc;
+    height: 62px;
+    display: flex;
+    justify-content: space-between;
+    color:#000000;
+    position: fixed;
+    align-items: center;
+    padding: 10px;
+.appBar_menu{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    width: 30%;
+    font-size: 16px;
+}
+
+}
+.appBar_container-scrolled{
+    background-color: #000000;
+    color:#fcfcfc
+}
+// mobile
+@media (max-width: 767px){
+    .appBar_container {
+    .appBar_menu{
+        display: none;
+        border:1px solid black;
+    } }
+}

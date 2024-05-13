@@ -1,7 +1,11 @@
 @import "../../../colors/colorpreset.scss";
 @import "../../../utils/style/toogleButton.scss";
+.chatbox__container-mounted {
+  width: 30% !important;
+  transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 .chatbox__container {
-  width: 30%;
+  width: 10%;
   background-color: black;
   color: $primary-variant3-color;
   display: flex;
@@ -10,68 +14,69 @@
   position: fixed;
   bottom: 0;
   right: 0;
-padding: 5px;
-  .toogleChat__button{
+  padding: 5px;
+  border: 1px solid red;
+
+  .toogleChat__button {
     padding: 1rem;
     background-color: $primary-variant1-color;
     border: none;
     font-weight: bold;
     color: white;
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
   }
-  .identificationForm{
+  .identificationForm {
     display: flex;
 
-
-    .accessButton{
+    .accessButton {
       background-color: transparent;
       color: white;
-      padding: .5rem;
-      margin-right: .1rem;
+      padding: 0.5rem;
+      margin-right: 0.1rem;
       width: 100%;
       border: none;
-      &:hover{
+      &:hover {
         background-color: $secondary-color;
         cursor: pointer;
       }
     }
-    .disabled{
+    .disabled {
       background-color: rgb(42, 42, 42);
       color: black;
-      &:hover{
+      &:hover {
         background-color: rgb(42, 42, 42);
         cursor: not-allowed;
       }
     }
-    input{
+    input {
       width: 100%;
       padding: 5px;
     }
-    button{
+    button {
       padding: 5px;
       width: 20%;
     }
-    input{
+    input {
       margin-right: 5px;
     }
   }
   .corecenter {
-    .conversation__container{
+    .conversation__container {
       padding: 1rem 0 1rem 0;
       overflow-y: scroll;
       max-height: 10rem;
-      .conversation_userA{
+      .conversation_userA {
         color: rgb(157, 255, 0);
         text-align: right;
       }
       color: rgb(255, 123, 0);
-      .message_line{
+      .message_line {
         margin-top: 10px;
       }
     }
-   
+
     // }
     form {
       width: 100%;
@@ -91,12 +96,12 @@ padding: 5px;
           outline: none;
         }
       }
-      button{
+      button {
         background-color: transparent;
         color: $primary-variant1-color;
         border: none;
         padding: 1rem;
-        &:hover{
+        &:hover {
           border: 1px solid white;
           cursor: pointer;
         }
@@ -105,8 +110,8 @@ padding: 5px;
   }
 }
 // mobile screen
-@media (max-width:500px){
-  .chatbox__container{
+@media (max-width: 500px) {
+  .chatbox__container {
     width: 99%;
   }
 }

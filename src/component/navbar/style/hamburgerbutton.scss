@@ -1,0 +1,21 @@
+.hambutton_container {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    display: none;
+
+    div {
+        width: 40%;
+        border: 3px solid black;
+        margin-top: 5px;
+    }
+}
+
+@media(max-width:500px) {
+    .hambutton_container {
+        display: block;
+    }
+}

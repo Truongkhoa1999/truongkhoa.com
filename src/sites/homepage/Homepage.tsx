@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navbar } from "../../component/navbar/Navbar";
 // style
 import "./style/homepage.scss";
@@ -9,6 +9,8 @@ import { Contact } from "../../component/contact/Contact";
 import { Stacks } from "../../component/stacks/Stacks";
 import { About } from "../../component/home/About";
 import { Chatbox } from "../../component/chatbox/Chatbox";
+import { ProfileCard } from "../../component/ProfileCard/ProfileCard";
+import { BodyContent } from "../../component/BodyContent/BodyContent";
 // import { Footer } from "../../component/footer/Footer";
 interface NavProps {
   about: boolean;
@@ -27,6 +29,7 @@ export const Homepage = () => {
     portfolio: false,
 
   });
+
   const handleElementsAreClicked = (elements: string) => {
     const updatedObject = { ...elementsState } as NavProps;
 
@@ -41,16 +44,44 @@ export const Homepage = () => {
 
   };
 
+  const [winWidth, setWinWidth] = useState(window.innerWidth);
+
+  // Update window width on resize
+  useEffect(() => {
+    const handleResize = () => {
+      setWinWidth(window.innerWidth);
+      console.log("Current window width:", window.innerWidth); // Log width on every resize
+    };
+
+    // Set up event listener
+    window.addEventListener('resize', handleResize);
+
+    // Initial log
+    console.log("Initial window width:", window.innerWidth);
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  useEffect(()=>{
+    console.log('dittme may')
+  },[])
+
   return (
     <div className="homepage__container">
-      <Navbar handleSwitchElements={handleElementsAreClicked} />
-      <div className="content__container">
-        {elementsState.about ? <About   /> : ""}
-        {elementsState.portfolio ? <Projects  /> : ""}
-        {elementsState.contact ? <Contact  /> : ""}
-        {elementsState.stacks ? <Stacks   /> : ""}
-      </div>
-      <Chatbox />
+      {/* <Navbar handleSwitchElements={handleElementsAreClicked} /> */}
+        <ProfileCard />
+        <BodyContent />
+        {/* <div>
+        <p>{winWidth}</p>
+        </div> */}
+        {/* {elementsState.about ? <About   /> : ""} */}
+        {/* {elementsState.portfolio ? <Projects  /> : ""} */}
+        {/* {elementsState.contact ? <Contact  /> : ""} */}
+        {/* {elementsState.stacks ? <Stacks   /> : ""} */}
+
+      {/* <Chatbox /> */}
       {/* <Footer /> */}
     </div>
   );

@@ -4,9 +4,7 @@
   height: 100%;
   padding: 0;
   margin: 0;
-// display: flex;
-// flex-wrap: wrap;
-// flex-direction: 'row';
+  display: flex;
 }
 // Desktop
 @media (min-width: 768px) {
@@ -20,7 +18,6 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: 'column';
-    border:1px solid blue;
   }
 }
 

@@ -64,9 +64,7 @@ export const Homepage = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  useEffect(()=>{
-    console.log('dittme may')
-  },[])
+
 
   return (
     <div className="homepage__container">

@@ -7,13 +7,28 @@ import { faLocation } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
-
-
-
+import { useEffect, useState } from 'react';
 
 
 export const ProfileCard = () =>{
+
+    const [windowDimensions, setWindowDimensions] = useState({
+        wWidth: window.innerWidth,
+        wHeight: window.innerHeight
+    })
+
+    useEffect(() => {
+        const handleResizeWindowDimensions = ()=>{
+            setWindowDimensions({
+                wWidth: window.innerWidth,
+                wHeight: window.innerHeight,
+            })
+        }
+        window.addEventListener('resize',handleResizeWindowDimensions)
+        return(()=>{
+            window.removeEventListener('resize',handleResizeWindowDimensions)
+        })
+    },[])
 
     return(
         <div className='profileCard'>
@@ -24,7 +39,9 @@ export const ProfileCard = () =>{
             <p className='generalInformation_jobtitle'>SOFTWARE DEVELOPER</p>
             <div className='generalInformation_dash'></div>
            </div>
-           <div className='contactInformation'>
+      {
+        windowDimensions.wWidth > 758 &&(
+            <div className='contactInformation'>
             <div className='contactInformation_line'>
             <div className='contactInformation_line_icon'>
             <FontAwesomeIcon icon={faEnvelope} className='fa-lg' /> 
@@ -53,6 +70,8 @@ export const ProfileCard = () =>{
             </div>
             </div>
            </div>
+        )
+      }
            {/* detail information */}
            <div className='socialMedia'>
             <div className='socialMediaIc'>

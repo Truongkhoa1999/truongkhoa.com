@@ -92,26 +92,25 @@
     .profileCard{
         width: 100%;
         max-width: 100%;
-        height: 27%;
-        border:1px solid yellow;
+        height:fit-content;
+        padding-bottom: 0px;
         .gernalInformation{
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-size: 40px;
-            padding-top: 5px;
+            padding-top: 15px;
             img{
-                min-width: 10%;
-                width: 12;
-                max-width: 15%;
-                margin-top: 4.5%;
+                min-width: 8%;
+                width: 50px;
+                margin-top: 0;
                 border-radius: 40px;
                 border:5px solid green
             }
             .generalInformation_author{
                 margin-top: 9px;
-                font-size: .7em;
+                font-size: .5em;
             }
             .generalInformation_jobtitle{
                 margin-top: 6px;
@@ -124,9 +123,29 @@
             .generalInformation_dash{
                 width: 84%;
                 border-top: 1px solid white;
-                margin-bottom: 4.5%;
+                margin-bottom: 10px;
             }
         }
+     
+    .socialMedia{
+        width: 100%;
+        margin-top: 0;
+        padding: 15px 0 15px 0;
+        height: auto;
+        .socialMediaIc{
+            margin-right: 24px;
+            min-width: 30px;
+            min-height: 30px;  
+            background-color: $supportive-color;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .fa-lg{
+                color: black;
+            }
+        }
+    }
     }
 }
 // tablet

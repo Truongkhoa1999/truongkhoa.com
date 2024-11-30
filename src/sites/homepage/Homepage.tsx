@@ -50,6 +50,20 @@ export const Homepage = () => {
         {/* {elementsState.contact && <Contact />} */}
         {/* {elementsState.stacks && <Stacks />} */}
       </div>
+      <div className="area" >
+            <ul className="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
     </div>
   );
 };

@@ -11,15 +11,25 @@
 .home__container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100vh;
+  width: 30%;
+  height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   align-items: center;
   justify-content: center;
   color:$secondary-color;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30vh;
+  text-align: center;
+  backdrop-filter: blur(20px); 
+  padding: 2em;
 
-  .aboutSubtitle{
+  .aboutSubtitle, .downloadButton{
     margin-top: 1em;
+  }
+  .downloadButton{
+    padding: 1em;
+    border-radius: 5%;
   }
 
   .biotext__container {
@@ -73,6 +83,7 @@
 // Mobile
 @media (max-width: 500px) {
   .home__container {
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;

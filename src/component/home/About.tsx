@@ -11,7 +11,7 @@ export const About = () => {
   return (
     <div className={outputSlideDirection === 'sr' ? "home__container sr": "home__container sl" } >
       <h1 className="aboutTitle">Hello, I am Khoa</h1>
-      <h3 className="aboutSubtitle">Software consultant @Happy-Coding</h3>
+      <h3 className="aboutSubtitle">Software consultant @Happy-Coding based in Helsinki 🇫🇮</h3>
     </div>
   );
 };

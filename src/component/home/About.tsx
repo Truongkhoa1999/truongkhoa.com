@@ -10,11 +10,7 @@ export const About = () => {
  
   return (
     <div className={outputSlideDirection === 'sr' ? "home__container sr": "home__container sl" } >
-      <div className="biotext__container">
-        <div className="textGr">
-          <h1>KHOA SOFTWARE DEVELOPER</h1>  
-        </div>
-      </div>
+  
     </div>
   );
 };

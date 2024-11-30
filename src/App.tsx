@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Homepage } from "./sites/homepage/Homepage";
 // style
-import "./App.css";
+import "./App.scss";
 import './style.scss'
 import './utils/style/scrollbar.scss'
 import { SlideDirectionContext } from "./utils/SlideDirectionContext";

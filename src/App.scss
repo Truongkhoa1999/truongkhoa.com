@@ -1,13 +1,17 @@
+@import './/colors/colorpreset.scss';
+
 * {
   margin: 0;
   padding: 0;
   font-family: monospace!important;
+
 }
 body{
-  background-color: black;
+   background-color: $secondary-color; 
   margin: 0;
   padding: 0;
   font-family: 'aquarius-regular'!important;
+  overflow-x: hidden;
 }
 .app_container{
   display: flex;

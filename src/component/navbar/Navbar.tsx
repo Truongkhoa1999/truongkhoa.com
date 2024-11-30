@@ -33,20 +33,20 @@ export const Navbar: React.FC<NavProps> = ({ handleSwitchElements }) => {
           >
             ABOUT
           </li>
-          <li
+          {/* <li
             className={activeElement === "stacks" ? "li-active" : "li-inactive"}
             onClick={() => handleElmentClicked("stacks")}
           >
             STACKS
-          </li>
-          <li
+          </li> */}
+          {/* <li
             className={
               activeElement === "contact" ? "li-active" : "li-inactive"
             }
             onClick={() => handleElmentClicked("contact")}
           >
             CONTACT
-          </li>
+          </li> */}
           <li
             className={
               activeElement === "portfolio" ? "li-active" : "li-inactive"

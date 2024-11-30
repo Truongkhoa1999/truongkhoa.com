@@ -35,7 +35,7 @@ const outputSlideDirection = useSelector((state: RootState) => state.slideAnimat
               className={isLoading?"image--loading":"loadedImage"}
             />}
             <div className="projectInfo">
-              <h2>{i.name}</h2>
+              {/* <h2>{i.name}</h2> */}
               {/* <h3>{i.role}</h3> */}
               <div className="stack__wrapper">
                 <p>

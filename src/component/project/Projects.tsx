@@ -35,15 +35,7 @@ const outputSlideDirection = useSelector((state: RootState) => state.slideAnimat
               className={isLoading?"image--loading":"loadedImage"}
             />}
             <div className="projectInfo">
-              {/* <h2>{i.name}</h2> */}
-              {/* <h3>{i.role}</h3> */}
-              <div className="stack__wrapper">
-                <p>
-                  {i.stack.map((tech, techIndex) => (
-                    <h5 key={techIndex}>{tech}</h5>
-                  ))}
-                </p>
-              </div>
+              <h2 className="postTtile">{i.name}</h2>
             </div>
           </div>
         </a>

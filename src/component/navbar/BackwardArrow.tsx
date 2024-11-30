@@ -10,7 +10,7 @@ export const BackwardArrow = ({setIsContentFocused,elementTitle}:BackwardArrowPr
 
     return(
         <button className="backButton" onClick={()=>setIsContentFocused(false)}>
-            <p> {`BACK ${elementTitle}`}</p>
+            <p> {`<- ${elementTitle}`}</p>
         </button>
     )
 }

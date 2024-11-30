@@ -16,7 +16,11 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   align-items: center;
   justify-content: center;
-  background-color: $primary-variant2-color;
+  color:$secondary-color;
+
+  .aboutSubtitle{
+    margin-top: 1em;
+  }
 
   .biotext__container {
     display: flex;

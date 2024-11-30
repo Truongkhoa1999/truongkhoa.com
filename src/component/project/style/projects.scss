@@ -11,38 +11,36 @@
 }
 
 .projects__container {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: $secondary-color;
-  align-self: center;
+  // background-color: $secondary-color;
 
   .items__wrapper {
-    width: 90%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 2rem 0 4rem 0;
-
     a {
       text-decoration: none;
       color: red !important;
 
       .project__card {
-        width: 50%;
+        width: 40%;
         display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        flex-direction: column;
         margin-left: auto;
         margin-right: auto;
-        padding: 1rem;
-        background-color: $primary-color;
+        padding: 1em;
+        backdrop-filter: blur(20px); 
+
         margin-top: 1rem;
+        border-radius: 2%;
 
         .item--loading {
-          width: 30%;
-
+          width: 100%;
           background: #eee;
-          background: linear-gradient(90deg, $primary-color, $secondary-color, #005314);
+          background: linear-gradient(90deg, $primary-color, $secondary-color);
 
           background-size: 200% 100%;
           animation: 1.5s loading linear infinite;
@@ -61,32 +59,29 @@
         }
 
         .loadedImage {
-          width: 30%;
+          width: 90%;
           overflow: hidden;
           filter: grayscale(100%);
-          padding: 2px;
+          align-self: center;
 
         }
-
-        // test ended
         &:hover {
-          background-color: $primary-variant3-color;
-
+          // background-color: $secondary-color;
+          border:1px solid $secondary-color;
+          color: $primary-color;
           .loadedImage {
             cursor: pointer;
             transition: .5s;
             filter: grayscale(0%);
             overflow: hidden;
           }
-
-
         }
 
         .projectInfo {
-          color: white;
-
-          h2 {
+          .postTtile {
             color: $secondary-color;
+            margin-top: 1em;
+            text-align: center;
           }
 
           h5 {
@@ -96,7 +91,6 @@
 
         img {
           width: 20rem;
-          // height: 10px;
         }
       }
     }
@@ -106,13 +100,16 @@
 @media (max-width:500px) {
   .items__wrapper {
     width: 100%!important;
+    padding: 0!important;
 
     .project__card {
-    width: auto;
-    border:1px solid red;
+    width: 70%!important;
     .loadedImage {
       width: 100%!important;
-      height: 60px;
+    }
+
+    .item--loading {
+      height: auto;
     }
     }
   }

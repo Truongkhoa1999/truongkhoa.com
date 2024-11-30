@@ -1,8 +1,14 @@
 @import '../../../colors/colorpreset.scss';
 
-.backButton{
-background-color: $primary-color;
-align-self: flex-start;
-padding: 2em 0 2em;
-width: 100%;
+.backButton {
+    background-color: $primary-color;
+    align-self: flex-start;
+    padding: 2em 0 2em;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border:none;
+  filter: drop-shadow(0 0 0.75rem black);
+  
+
 }

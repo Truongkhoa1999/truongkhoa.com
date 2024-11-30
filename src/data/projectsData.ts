@@ -4,6 +4,7 @@ interface ProjectDataProps {
   image: string;
   link: string;
   stack: string[];
+  isStopped?:boolean 
 }
 export const projectsData: ProjectDataProps[] = [
   {
@@ -13,6 +14,7 @@ export const projectsData: ProjectDataProps[] = [
       "https://firebasestorage.googleapis.com/v0/b/truongkhoaportfolio.appspot.com/o/thumbnail%2Fthebra.avif?alt=media&token=78cf1ac0-3989-41f9-a231-c9d2f43bec8b&_gl=1*xiba74*_ga*NDk2MzQ2NTIzLjE2ODk4ODczMDY.*_ga_CW55HF8NVT*MTY5NjI2NzI4Ni4zNC4xLjE2OTYyNjg4NjcuNjAuMC4w",
     link: "https://thebra.fi/",
     stack: ["REACTJS ", "TYPESCRIPT ", "SAAS ", "JAVA ", "POSTGRESQL"],
+    isStopped:true
   },
   {
     name: "Mehtaheino.com",

@@ -3,10 +3,6 @@ import { useState } from "react";
 import "./style/homepage.scss";
 import "../../utils/style/scrollbar.scss";
 
-import { Projects } from "../../component/project/Projects";
-import { Contact } from "../../component/contact/Contact";
-import { Stacks } from "../../component/stacks/Stacks";
-import { About } from "../../component/home/About";
 import { Header } from "../../component/header/Header";
 // import { Footer } from "../../component/footer/Footer";
 interface NavProps {

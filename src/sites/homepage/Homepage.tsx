@@ -1,8 +1,12 @@
 // style
 import "./style/homepage.scss";
 import "../../utils/style/scrollbar.scss";
+import { faCat } from "@fortawesome/free-solid-svg-icons";
 
 import { Header } from "../../component/header/Header";
+import { Switcher } from "../../component/switcher/Switcher";
+import { useState } from "react";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 // import { Footer } from "../../component/footer/Footer";
 // interface NavProps {
 //   about: boolean;
@@ -11,38 +15,43 @@ import { Header } from "../../component/header/Header";
 //   resume: boolean;
 //   portfolio: boolean;
 // }
+// type stateSwitcherType =
+//   {
+//     name: string;
+//     icon?: IconProp | undefined
+//   }
+// ;
+
+const switcherElements = [
+  {
+    name: "about",
+    icon: faCat as IconProp,
+  },
+  {
+    name: "experience",
+    icon: faCat as IconProp,
+  },
+];
 
 export const Homepage = () => {
-  // const [elementsState, setElementsState] = useState<NavProps>({
-  //   about: true,
-  //   stacks: false,
-  //   resume: false,
-  //   contact: false,
-  //   portfolio: false,
-  // });
-  // const handleElementsAreClicked = (elements: string) => {
-  //   const updatedObject = { ...elementsState } as NavProps;
+  const [switchState, setSwitchState] = useState<string>(
+    switcherElements[0].name,
+  );
 
-  //   for (const key in updatedObject) {
-  //     if (key === elements) {
-  //       updatedObject[key as keyof NavProps] = true;
-  //     } else {
-  //       updatedObject[key as keyof NavProps] = false;
-  //     }
-  //   }
-  //   setElementsState(updatedObject);
-  // };
+  const handleSwitcherStateChanges = (selectedSwitcherElement: string) => {
+    setSwitchState(selectedSwitcherElement);
+  };
 
   return (
     <div className="homepage__container">
       <Header />
-      {/* <Navbar handleSwitchElements={handleElementsAreClicked} /> */}
-      {/* <div className="content__container">
-        {elementsState.about ? <About /> : ""}
-        {elementsState.portfolio ? <Projects /> : ""}
-        {elementsState.contact ? <Contact /> : ""}
-        {elementsState.stacks ? <Stacks /> : ""}
-      </div> */}
+
+      <Switcher
+        stateSwitcher={switcherElements}
+        onStateChange={handleSwitcherStateChanges}
+      />
+
+      {switchState == "about" && <body style={{ color: "red" }}>yes</body>}
     </div>
   );
 };

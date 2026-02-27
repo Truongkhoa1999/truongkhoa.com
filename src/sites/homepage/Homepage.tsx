@@ -7,20 +7,6 @@ import { Header } from "../../component/header/Header";
 import { Switcher } from "../../component/switcher/Switcher";
 import { useState } from "react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-// import { Footer } from "../../component/footer/Footer";
-// interface NavProps {
-//   about: boolean;
-//   contact: boolean;
-//   stacks: boolean;
-//   resume: boolean;
-//   portfolio: boolean;
-// }
-// type stateSwitcherType =
-//   {
-//     name: string;
-//     icon?: IconProp | undefined
-//   }
-// ;
 
 const switcherElements = [
   {
@@ -29,6 +15,10 @@ const switcherElements = [
   },
   {
     name: "experience",
+    icon: faCat as IconProp,
+  },
+  {
+    name: "projects",
     icon: faCat as IconProp,
   },
 ];

@@ -4,6 +4,10 @@
   padding: 10px;
   min-height: 100vh;
   max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
 }
 
 // Tablet
@@ -24,6 +28,7 @@
 @media (min-width: 1024px) {
   .homepage__container {
     padding: 16px;
+    gap: 50px;
   }
 }
 

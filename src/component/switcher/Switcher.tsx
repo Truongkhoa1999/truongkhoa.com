@@ -1,5 +1,7 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./style/switcher.scss";
+import { useState } from "react";
 
 type SwitcherProps = {
   stateSwitcher: {
@@ -10,36 +12,28 @@ type SwitcherProps = {
 };
 
 export function Switcher({ stateSwitcher, onStateChange }: SwitcherProps) {
+  const [active, setActive] = useState<string>("About");
+
   return (
-    <div
-      style={{
-        border: "1px solid red",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-around",
-      }}
-    >
+    <div>
       {stateSwitcher.map((item) => (
         <div
-          style={{
-            width: "20px",
-            border: "1px solid red",
+          className={`switcher__item ${
+            active === item.name ? "switcher__item--active" : ""
+          }`}
+          onClick={() => {
+            setActive(item.name);
+            onStateChange(item.name);
           }}
-          onClick={() => onStateChange(item.name)}
         >
           {item?.icon && (
             <FontAwesomeIcon
+              className="switcher__icon"
               style={{ marginRight: 4 }}
               icon={item?.icon as IconProp}
             />
           )}
-          <body
-            style={{
-              color: "black",
-            }}
-          >
-            {item?.name}
-          </body>
+          <body>{item?.name}</body>
         </div>
       ))}
     </div>

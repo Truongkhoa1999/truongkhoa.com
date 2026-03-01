@@ -15,7 +15,7 @@ export function Switcher({ stateSwitcher, onStateChange }: SwitcherProps) {
   const [active, setActive] = useState<string>("About");
 
   return (
-    <div>
+    <div className="switcher">
       {stateSwitcher.map((item) => (
         <div
           className={`switcher__item ${
@@ -33,7 +33,7 @@ export function Switcher({ stateSwitcher, onStateChange }: SwitcherProps) {
               icon={item?.icon as IconProp}
             />
           )}
-          <body>{item?.name}</body>
+          <p>{item?.name}</p>
         </div>
       ))}
     </div>

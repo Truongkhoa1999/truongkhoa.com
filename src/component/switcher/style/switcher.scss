@@ -3,12 +3,12 @@
   width: 100%;
   padding: 6px;
   border-radius: 5px;
-
   display: inline-flex;
   align-items: center;
+  justify-content: space-around;
   gap: 4px;
 
-  background-color: #f1f1f1; // nền xám nhẹ kiểu MUI
+  background-color: #fffafa; // nền xám nhẹ kiểu MUI
 }
 
 .switcher__item {

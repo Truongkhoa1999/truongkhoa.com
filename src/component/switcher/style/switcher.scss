@@ -4,11 +4,20 @@
   padding: 6px;
   border-radius: 5px;
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   gap: 4px;
 
-  background-color: #fffafa; // nền xám nhẹ kiểu MUI
+    background: #f5f5f5;
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.08),
+    0 4px 10px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.3s ease;
+
 }
 
 .switcher__item {

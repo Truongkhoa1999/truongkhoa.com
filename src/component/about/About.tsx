@@ -8,10 +8,22 @@ export function About() {
         display: "flex",
         flexDirection: "column",
         gap: 10,
+        flexWrap: "wrap",
+        width: "100%",
+        maxWidth: "100%",
+        minWidth: 0,
       }}
     >
       <h2>About Me</h2>
-      <p>
+      <p
+        style={{
+          margin: 0,
+          maxWidth: "100%",
+          overflowWrap: "anywhere",
+          wordBreak: "break-word",
+          hyphens: "auto",
+        }}
+      >
         Frontend-focused software developer at Happy Coding with 3+ years of
         experience building web and mobile applications in Finland. I work
         primarily with React, Next.js, and React Native, while also contributing
@@ -20,7 +32,15 @@ export function About() {
         app, and ODIN, a social media management platform integrating AI
         features and multiple platform APIs.
       </p>
-      <p>
+      <p
+        style={{
+          margin: 0,
+          maxWidth: "100%",
+          overflowWrap: "anywhere",
+          wordBreak: "break-word",
+          hyphens: "auto",
+        }}
+      >
         Experienced in building scalable UIs, RESTful APIs, and integrating
         modern developer tooling such as Redux Toolkit, React Hook Form, Zod
         validation, and monitoring systems like Sentry. Previously led
@@ -35,6 +55,10 @@ export function About() {
           display: "flex",
           justifyContent: "flex-start",
           gap: 10,
+          flexWrap: "wrap",
+
+          maxWidth: "100%",
+          minWidth: 0,
         }}
       >
         <Chip bordered={true} text="Forward-thinking" />
@@ -50,6 +74,10 @@ export function About() {
           display: "flex",
           justifyContent: "flex-start",
           gap: 10,
+
+          flexWrap: "wrap",
+          maxWidth: "100%",
+          minWidth: 0,
         }}
       >
         <Chip bordered={true} text="AI-assistant" />

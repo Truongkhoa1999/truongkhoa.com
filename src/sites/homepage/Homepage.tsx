@@ -7,6 +7,7 @@ import { Switcher } from "../../component/switcher/Switcher";
 import { useState } from "react";
 import { Wrapper } from "../../component/wrapper/Wrapper";
 import { About } from "../../component/about/About";
+import { Experience } from "../../component/experience/Experience";
 
 const switcherElements = [
   {
@@ -47,7 +48,16 @@ export const Homepage = () => {
           stateSwitcher={switcherElements}
           onStateChange={handleSwitcherStateChanges}
         />
-        <Wrapper>{switchState == "about" && <About />}</Wrapper>
+        {switchState === "about" ? (
+          <Wrapper>
+            <About />
+          </Wrapper>
+        ) : null}
+        {switchState === "experience" ? (
+          <Wrapper>
+            <Experience />
+          </Wrapper>
+        ) : null}
       </div>
     </div>
   );

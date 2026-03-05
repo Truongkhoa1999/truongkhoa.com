@@ -5,6 +5,7 @@ import "../../utils/style/scrollbar.scss";
 import { Header } from "../../component/header/Header";
 import { Switcher } from "../../component/switcher/Switcher";
 import { useState } from "react";
+import { Wrapper } from "../../component/wrapper/Wrapper";
 
 const switcherElements = [
   {
@@ -45,8 +46,9 @@ export const Homepage = () => {
           stateSwitcher={switcherElements}
           onStateChange={handleSwitcherStateChanges}
         />
-
-        {switchState == "about" && <body style={{ color: "red" }}>yes</body>}
+        <Wrapper>
+          {switchState == "about" && <body style={{ color: "red" }}>yes</body>}
+        </Wrapper>
       </div>
     </div>
   );

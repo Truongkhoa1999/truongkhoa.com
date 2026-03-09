@@ -13,6 +13,7 @@ import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import { Projects } from "../../component/projects/Project";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { Footer } from "../../component/footer/Footer";
+import { Contact } from "../../component/contact/Contact";
 
 const switcherElements = [
   {
@@ -114,12 +115,13 @@ export const Homepage = () => {
   const handleSwitcherStateChanges = (selectedSwitcherElement: string) => {
     setSwitchState(selectedSwitcherElement);
   };
+  const [isContactOpened, setIsContactOpened] = useState(false);
 
   return (
     <div className="homepage__container">
       <div className="homepage__inner">
-        <Header />
-
+        <Header onClick={setIsContactOpened} />
+        {isContactOpened && <Contact onToogle={setIsContactOpened} />}
         <Switcher
           stateSwitcher={switcherElements}
           onStateChange={handleSwitcherStateChanges}

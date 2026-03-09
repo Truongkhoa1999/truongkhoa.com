@@ -49,7 +49,10 @@ export function Chip({ text, bordered, icon }: ChipProps) {
 
 export function Button() {}
 
-export function Header() {
+type HeaderProps = {
+  onClick: (a: boolean) => void;
+};
+export function Header({onClick}:HeaderProps) {
   return (
     <div className="header">
       <div className="header__profileImg">
@@ -86,6 +89,7 @@ export function Header() {
             hyperLink=""
             title="contact"
             startIcon={faBriefcase as IconProp}
+            onClick={() => onClick(true)}
           />
           <CustomButton
             hyperLink="https://github.com/Truongkhoa1999"
@@ -93,7 +97,7 @@ export function Header() {
             startIcon={faGithub as IconProp}
           />
           <CustomButton
-            hyperLink="linkedin.com/in/khoa-truong-010999/?skipRedirect=true"
+            hyperLink="https://www.linkedin.com/in/khoa-truong-010999/"
             title="LinkedIn"
             startIcon={faLinkedin as IconProp}
           />

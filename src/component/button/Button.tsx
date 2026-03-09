@@ -5,9 +5,10 @@ type ButtonProps = {
   hyperLink: string;
   title: string;
   startIcon?: IconProp;
+  onClick?: () => void;
 };
 
-export function CustomButton({ hyperLink, title, startIcon }: ButtonProps) {
+export function CustomButton({ hyperLink, title, startIcon, onClick }: ButtonProps) {
   return (
     <div
       style={{
@@ -22,6 +23,7 @@ export function CustomButton({ hyperLink, title, startIcon }: ButtonProps) {
         fontSize: 14,
         transition: "all 0.2s ease",
       }}
+      onClick={onClick}
     >
       {startIcon ? (
         <FontAwesomeIcon

@@ -1,13 +1,29 @@
-
 import { useSelector } from "react-redux";
 import "./style/contact.scss";
 import { RootState } from "../redux/store";
-// import "../stacks/style/crtscreen.scss";
 
-export const Contact = () => {
-  const outputSlideDirection = useSelector((state: RootState) => state.slideAnimation.outputSlideDirection);
+type ContactProps = {
+  onToogle: (isOpened: boolean) => void;
+};
+export const Contact = ({ onToogle }: ContactProps) => {
+  const outputSlideDirection = useSelector(
+    (state: RootState) => state.slideAnimation.outputSlideDirection,
+  );
   return (
-    <div className={outputSlideDirection === 'sr'? "contact__wrapper sr" : "contact__wrapper sl"} >
+    <div
+      className={
+        outputSlideDirection === "sr"
+          ? "contact__wrapper sr"
+          : "contact__wrapper sl"
+      }
+    >
+      <button
+        onClick={() => {
+          onToogle(false);
+        }}
+      >
+        close
+      </button>
       <div className="contact__container">
         <div className="generalInfo__container">
           <img
@@ -18,8 +34,15 @@ export const Contact = () => {
             To request a quote or a meet up for a project coffee. Let’s talk
             within Finnish time (UTC +2).
           </p>
-          <a className="bioLink" href="https://github.com/Truongkhoa1999">GIT</a>
-          <a className="bioLink" href="https://www.linkedin.com/in/khoa-truong-010999/">Linkedin</a>
+          <a className="bioLink" href="https://github.com/Truongkhoa1999">
+            GIT
+          </a>
+          <a
+            className="bioLink"
+            href="https://www.linkedin.com/in/khoa-truong-010999/"
+          >
+            Linkedin
+          </a>
         </div>
         <form action="https://formspree.io/f/mrgwyjbr" method="POST">
           <input
@@ -44,8 +67,6 @@ export const Contact = () => {
           <input type="submit" value="Submit" />
         </form>
       </div>
-
-      {/* <div className="background"></div> */}
     </div>
   );
 };

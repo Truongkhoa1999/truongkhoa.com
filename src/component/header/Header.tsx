@@ -48,7 +48,7 @@ export function Header() {
     <div>
       <div className="header">
         <div className="header__profileImg">
-          <img src="public/profileImg.png" alt="profile image" />
+          <img src="/profileImg.png" alt="profile image" />
         </div>
 
         <div className="header__profileTxt">

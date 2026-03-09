@@ -2,6 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style/header.scss";
 import { faCat } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { ChipDefault } from "../chips/Chip";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { CustomButton } from "../button/Button";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export type ChipProps = {
   text: string;
@@ -45,19 +51,52 @@ export function Button() {}
 
 export function Header() {
   return (
-    <div>
-      <div className="header">
-        <div className="header__profileImg">
-          <img src="/profileImg.png" alt="profile image" />
-        </div>
+    <div className="header">
+      <div className="header__profileImg">
+        <img src="/profileImg.png" alt="profile image" />
+      </div>
 
-        <div className="header__profileTxt">
-          <h1>Khoa Truong</h1>
-          <h3>Software developer</h3>
+      <div className="header__profileTxt">
+        <h1>Khoa Truong</h1>
+        <h3>Software developer • Frontend Focus</h3>
+        <div className="chips">
           <Chip bordered={true} text="Frontend" />
           <Chip bordered={true} text="Web/mobile app" />
-
           <Chip bordered={false} icon={faCat as IconProp} text="architect" />
+        </div>
+        <div
+          className="'chips__default"
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 20,
+          }}
+        >
+          <ChipDefault
+            iconStart={faLocationDot as IconProp}
+            title="Helsinki, Finland 🇫🇮"
+          />
+          <ChipDefault
+            iconStart={faBriefcase as IconProp}
+            title="Software developer at Happy Coding"
+          />
+        </div>
+        <div className="button__contact">
+          <CustomButton
+            hyperLink=""
+            title="contact"
+            startIcon={faBriefcase as IconProp}
+          />
+          <CustomButton
+            hyperLink="https://github.com/Truongkhoa1999"
+            title="Git"
+            startIcon={faGithub as IconProp}
+          />
+          <CustomButton
+            hyperLink="linkedin.com/in/khoa-truong-010999/?skipRedirect=true"
+            title="LinkedIn"
+            startIcon={faLinkedin as IconProp}
+          />
         </div>
       </div>
     </div>

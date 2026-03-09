@@ -3,8 +3,6 @@ import "./style/header.scss";
 import { faCat } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-const profileImg = "src/assets/ch.png";
-
 export type ChipProps = {
   text: string;
   bordered?: boolean;
@@ -50,7 +48,7 @@ export function Header() {
     <div>
       <div className="header">
         <div className="header__profileImg">
-          <img src={profileImg} alt="profile image" />
+          <img src="public/profileImg.png" alt="profile image" />
         </div>
 
         <div className="header__profileTxt">

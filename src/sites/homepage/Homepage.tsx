@@ -137,11 +137,8 @@ export const Homepage = () => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "auto auto",
+              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
               gap: 50,
-
-              // padding: 0,
-              // width: "100%",
             }}
           >
             <Projects chips={projects} />

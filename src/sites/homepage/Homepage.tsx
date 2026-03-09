@@ -12,6 +12,7 @@ import { faReact, faNodeJs, faJs } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import { Projects } from "../../component/projects/Project";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { Footer } from "../../component/footer/Footer";
 
 const switcherElements = [
   {
@@ -145,6 +146,7 @@ export const Homepage = () => {
           </div>
         ) : null}
       </div>
+      <Footer />
     </div>
   );
 };

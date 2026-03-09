@@ -3,7 +3,7 @@ import "./style/header.scss";
 import { faCat } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-const profileImg = "src/assets/gallery/ch.png";
+const profileImg = "src/assets/ch.png";
 
 export type ChipProps = {
   text: string;

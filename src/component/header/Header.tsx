@@ -5,15 +5,12 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 const profileImg = "src/assets/gallery/ch.png";
 
-export function Chip({
-  text,
-  bordered,
-  icon,
-}: {
+export type ChipProps = {
   text: string;
   bordered?: boolean;
   icon?: IconProp;
-}) {
+};
+export function Chip({ text, bordered, icon }: ChipProps) {
   return (
     <div
       style={{

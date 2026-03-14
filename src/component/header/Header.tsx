@@ -62,6 +62,8 @@ export function Header({onClick}:HeaderProps) {
       <div className="header__profileTxt">
         <h1>Khoa Truong</h1>
         <h3>Software developer • Frontend Focus</h3>
+        <h3>Business Information Technology • Haaga-helia</h3>
+
         <div className="chips">
           <Chip bordered={true} text="Frontend" />
           <Chip bordered={true} text="Web/mobile app" />

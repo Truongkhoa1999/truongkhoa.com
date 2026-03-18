@@ -105,6 +105,14 @@ export const projects = [
       { text: "Real-time DB", bordered: true },
     ],
   },
+  {
+    title: "Evorium",
+    subtitle: "IT support - Helsinki smoothies outlet",
+    description:
+      "Providing IT solutions consulting for sales businesses. Building and developing landing pages for businesses. Focusing on CMS applications and SEO optimization for Google search engines. Maintaining and adding new content to the page.",
+    chips: [{ text: "Next.js", bordered: false, icon: faReact as IconProp }],
+    viewMore: "https://evorium.fi/blank",
+  },
 ];
 
 export const Homepage = () => {

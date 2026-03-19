@@ -1,153 +1,113 @@
 @import "../../../colors/colorpreset.scss";
-@import "../../../utils//style/slideinanimation.scss";
 
 // General
-.sr {
-  animation: slideR 1s ease-in-out;
-}
 
-.sl {
-  animation: slideL 1s ease-in-out;
-}
-
-.contact__wrapper {
-  height: 100vh;
-  background-color: $primary-variant2-color;
+.contact__container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  // align-items: center;
 
+  /* ✨ glass effect */
+  background: rgba(255, 255, 255, 0.2); /* trong suốt */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* safari */
 
-  .contact__container {
-    width: 83%;
-    height: 77%;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  /* optional: shadow cho nổi */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+  .generalInfo__container {
+    p {
+      font-weight: bold;
+      font-size: 1.25rem;
+      width: 22rem;
+      margin-bottom: 55px;
+      color: black;
+    }
+  }
+
+  form {
+    width: 100%;
     display: flex;
-    padding-top: 4rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: $primary-color;
+    flex-direction: column;
+    gap: 20px;
+    input {
+      min-height: 50%;
+      background-color: transparent;
+      border: 1px solid black;
+      color: black;
 
-    .generalInfo__container {
-      img {
-        margin-bottom: 55px;
-      }
-
-      p {
-        font-weight: bold;
-        font-size: 1.25rem;
-        width: 22rem;
-        margin-bottom: 55px;
-      }
-
-
-
-      .bioLink {
-        text-decoration: none;
-        color: $secondary-color;
-        font-weight: bold;
-        color: $secondary-color;
-        background-color: $primary-variant2-color;
-        padding: 1rem;
-
-        &:hover {
-          background-color: $primary-variant3-color;
-          cursor: pointer;
-        }
-      }
+      padding: 1rem;
     }
 
-    form {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      margin-left: 84px;
+    input:last-child {
+      min-height: 7.5%;
+      align-self: flex-start;
+      background-color: $primary-variant2-color;
+      padding: 1rem;
+      border: none;
+      color: white;
 
-      input {
-        min-height: 15%;
-        background-color: transparent;
-        border: 1px solid white;
-        color: white;
-        margin-top: 20px;
-        padding: 1rem;
-      }
-
-      input:last-child {
-        min-height: 7.5%;
-        width: 21rem;
-        align-self: center;
-        margin-top: 46px;
-        color: $secondary-color;
-        background-color: $primary-variant2-color;
-        padding: 1rem;
-        border: none;
-
-        &:hover {
-          background-color: $primary-variant3-color;
-          cursor: pointer;
-        }
+      &:hover {
+        background-color: blue;
+        cursor: pointer;
       }
     }
   }
 }
 
 // Mobile here
-@media (max-width:500px) {
-  .contact__container {
-   
-    .generalInfo__container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-self: center;
+// @media (max-width: 500px) {
+//   .contact__container {
+//     .generalInfo__container {
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       align-self: center;
 
-      img {
-        margin-bottom: 55px;
-        width: 40%;
-        align-self: center;
-      }
+//       img {
+//         margin-bottom: 55px;
+//         width: 40%;
+//         align-self: center;
+//       }
 
-      p {
-        font-weight: bold;
-        font-size: 1rem !important;
-        width: 22rem;
-        margin-bottom: 55px;
-      }
+//       p {
+//         font-weight: bold;
+//         font-size: 1rem !important;
+//         width: 22rem;
+//         margin-bottom: 55px;
+//       }
 
-      .bioLink {
-        text-decoration: none;
-        color: $secondary-color;
-        font-weight: bold;
-        color: $secondary-color;
-        background-color: $primary-variant2-color;
-        padding: 1rem;
-        width: 90%;
-        align-self: center;
+//       .bioLink {
+//         text-decoration: none;
+//         color: $secondary-color;
+//         font-weight: bold;
+//         color: $secondary-color;
+//         background-color: $primary-variant2-color;
+//         padding: 1rem;
+//         width: 90%;
+//         align-self: center;
 
-        &:hover {
-          background-color: $primary-variant3-color;
-          cursor: pointer;
-        }
-      }
-    }
+//         &:hover {
+//           background-color: $primary-variant3-color;
+//           cursor: pointer;
+//         }
+//       }
+//     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      margin: 0 !important;
-      width: 80% !important;
-      align-items: center;
+//     form {
+//       input {
+//         width: 90% !important;
+//         min-height: 19% !important;
+//       }
 
-      input {
-        width: 90% !important;
-        min-height: 19% !important;
-
-        color: white;
-
-      }
-
-      input:last-child {
-        margin-top: 20px !important;
-      }
-    }
-  }
-}
+//       // input:last-child {
+//       //   margin-top: 20px !important;
+//       // }
+//     }
+//   }
+// }

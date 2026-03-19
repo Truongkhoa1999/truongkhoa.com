@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="slash less-than favicon">
+  <rect width="128" height="128" rx="24" fill="#0f172a"/>
+  <g fill="none" stroke="#e2e8f0" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M46 24 L26 104" stroke-width="12"/>
+    <path d="M92 32 L54 64 L92 96" stroke-width="12"/>
+  </g>
+</svg>

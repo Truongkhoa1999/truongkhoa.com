@@ -1,5 +1,6 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 type ButtonProps = {
   hyperLink: string;
@@ -25,18 +26,32 @@ export function CustomButton({
   startIcon,
   onClick,
 }: ButtonProps) {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
   if (hyperLink.length > 0) {
     return (
-      <div style={commonStyle}>
+      <div
+        style={{
+          ...commonStyle,
+          backgroundColor: isHovered ? "rgba(0,0,0,0.05)" : "transparent",
+          cursor: isHovered ? "pointer" : "alias",
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         {startIcon ? (
           <FontAwesomeIcon
             style={{ marginRight: 4 }}
             icon={startIcon as IconProp}
           />
         ) : null}
-        <a href={hyperLink} target="_blank" style={{
-          color:'black'
-        }}>
+        <a
+          href={hyperLink}
+          target="_blank"
+          style={{
+            color: "black",
+          }}
+        >
           {title}
         </a>
       </div>
@@ -44,7 +59,16 @@ export function CustomButton({
   }
 
   return (
-    <button style={commonStyle} onClick={onClick}>
+    <button
+      style={{
+        ...commonStyle,
+        backgroundColor: isHovered ? "rgba(0,0,0,0.05)" : "transparent",
+        cursor: isHovered ? "pointer" : "alias",
+      }}
+      onClick={onClick}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {startIcon && <FontAwesomeIcon icon={startIcon} />}
       {title}
     </button>

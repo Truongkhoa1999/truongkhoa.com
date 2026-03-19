@@ -8,6 +8,7 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { CustomButton } from "../button/Button";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faCertificate } from "@fortawesome/free-solid-svg-icons";
 
 export type ChipProps = {
   text: string;
@@ -52,7 +53,7 @@ export function Button() {}
 type HeaderProps = {
   onClick: (a: boolean) => void;
 };
-export function Header({onClick}:HeaderProps) {
+export function Header({ onClick }: HeaderProps) {
   return (
     <div className="header">
       <div className="header__profileImg">
@@ -102,6 +103,11 @@ export function Header({onClick}:HeaderProps) {
             hyperLink="https://www.linkedin.com/in/khoa-truong-010999/"
             title="LinkedIn"
             startIcon={faLinkedin as IconProp}
+          />
+          <CustomButton
+            hyperLink="https://www.credential.net/profile/truongkhoa435708/wallet"
+            title="Certificates"
+            startIcon={faCertificate as IconProp}
           />
         </div>
       </div>

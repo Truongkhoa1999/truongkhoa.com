@@ -12,7 +12,7 @@ type SwitcherProps = {
 };
 
 export function Switcher({ stateSwitcher, onStateChange }: SwitcherProps) {
-  const [active, setActive] = useState<string>("About");
+  const [active, setActive] = useState<string>("about");
 
   return (
     <div className="switcher">

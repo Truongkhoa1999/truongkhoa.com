@@ -129,7 +129,11 @@ export const Homepage = () => {
     <div className="homepage__container">
       <div className="homepage__inner">
         <Header onClick={setIsContactOpened} />
-        {isContactOpened && <Contact onToogle={setIsContactOpened} />}
+        {isContactOpened && (
+          <div className="contact__wrapper">
+            <Contact onToogle={setIsContactOpened} />
+          </div>
+        )}
         <Switcher
           stateSwitcher={switcherElements}
           onStateChange={handleSwitcherStateChanges}
